@@ -78,7 +78,7 @@ Copyright  2016
 			<br />
 			<label for="f_email">Email Address:</label> <input id="f_email" name="f_email" type="email" required="required" />
 			<br />
-			<label for="f_tel">Your Primary Phone Number:</label> <input id="f_tel" name="f_tel" type="tel" maxlength="12" pattern="123-456-7890" placeholder="Example: 123-456-7890" />
+			<label for="f_tel">Your Primary Phone Number:</label> <input id="f_tel" name="f_tel" type="tel" maxlength="12" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="Example: 123-456-7890" />
 			<br />
 			<label for="f_region">Select your geographic region:</label> <input id="f_region" name="f_region" type="text" list="f_region_select" />
 			<datalist id="f_region_select">
@@ -103,8 +103,13 @@ Copyright  2016
 				<option value="Job App">Job Openings</option>
 			</select>
 			</fieldset>
+			<fieldset id="f_commentSection">
+			<legend>What's on your mind?</legend>
 			<p><label for="f_comments">Enter your comments below:</label></p>
 			<textarea id="f_comments" name="f_comments" rows="4" cols="50" placeholder="Enter any comments here." required="required"></textarea>
+			</fieldset>
+			<fieldset id="f_join">
+			<legend>Be a Fan!</legend>
 			<p>Join our <i>Eggs-emplary Fan Club</i> and receive our monthly newsletter, discounts, and more!</p>
 			<p class="indent"><input id="f_newsletter_no" name="f_newsletter" type="radio" value="no" onclick="hide('f_second'); checkAll('f_contact', false);" /> <label for="f_newsletter_no">No way!</label></p>
 			<p class="indent" onclick=""><input id="f_newsletter_yes" type="radio" name="f_newsletter" value="yes" onclick="show('f_second')" /> <label for="f_newsletter_yes">Yes please!</label></p>
@@ -118,6 +123,7 @@ Copyright  2016
 						<li><input id="f_checkbox_recipes" name="f_checkbox_recipes" type="checkbox" /> <label for="f_checkbox_recipes">Recipes</label></li>
 					</ul>					
 				</fieldset><!--END SECOND FORM PART-->
+			</fieldset>	
 			<fieldset id="f_spambot">
 			<legend>Are you a Spambot?</legend>
 			<p><input id="f_spam_y" name="f_spam" type="radio" checked="checked" value="yes" /> <label for="f_spam_y">Yes. I am Clu the spambot, mining data.</label>
