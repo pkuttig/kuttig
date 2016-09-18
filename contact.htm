@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--
+Author: Paul Kuttig
+Copyright  2016
+-->
+
+<html lang="en">
+<head>
+
+<title>Contact Us - Sunny Eggs Co</title>
+<meta charset="UTF-8">
+
+<link href='main.css' rel='stylesheet' type='text/css' media="screen" />
+<script src="main.js" type="text/javascript"></script>
+<link rel="icon" href="art/favicon.ico">
+
+
+</head>
+
+
+<body id="contactUs">
+<header>
+<h1><a href="main.htm">Sunny Eggs Co</a></h1>
+	<nav>
+		<ul id="menu_top">
+			<li><a id="m_home" href="main.htm">Home</a></li>
+			<li id="m_about"><a href="about.htm">About Us</a>
+				<ul id="aboutSub">
+					<li><a href="about.htm">About Sunny Eggs</a></li>
+					<li><a href="about.htm#facts">Egg Facts</a>
+						<ul>
+							<li><a href="about.htm#methods">How We Do It</a></li>
+							<li><a href="about.htm#nutrition">Nutrition Facts</a></li>
+						</ul>
+					</li>
+					<li><a href="contact.htm">Contact Sunny Farms</a>
+						<ul>
+							<li><a href="contact.htm#location">Visit Our Farms</a></li>
+						</ul>
+					</li>			
+				</ul>
+			</li>
+			<li id="m_buy"><a href="buy.htm">Buy</a></li>
+			<li id="m_recipe"><a href="recipes.htm">Recipes</a>
+				<ul id="recipeSub">
+					<li><a href="recipes.htm#scramble">Perfect Scrambled Eggs</a></li>
+					<li><a href="recipes.htm#omlete">Omlete Supreme</a></li>
+				</ul>
+			</li>
+			<li id="m_news"><a href="news.htm">News/Blog</a>
+				<ul id="newsSub">
+					<li><a href="news.htm">Weekly News and Blog</a></li>
+					<li><a href="news.htm#follow">Follow Our Birds</a>
+						<ul>
+							<li><a href="news.htm#liveStream">Bird Watching</a></li>
+							<li><a href="news.htm#bios">Bird Bios</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul><!--END MAIN MENU TOP-->
+	</nav>
+</header>
+<div id="main">
+	<article id="pageIntro">
+		<h2>Contact Us</h2>
+		<p class="quote">We are always egg-static to hear from our customers and prospective customers if you have questions, just want to let us know how truly awesome our eggs are, or if you have have an issue. Please fill out the form below and we will get bact to you as soon as humanly possible. Also, you can become a fan of our eggs by signing up for our newsletter by checking the option in the form below. - Professor Yolk</p>	
+	</article><!--END PAGE INTRO-->
+	<h3>Contact Form</h3>
+	<div id="contactForm">
+		<form id="f_contact" name="f_contact" method="post" action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi" onsubmit="return checkForm('f_contact');">
+		<p>Send us a line. Fill out the form with your iformation and a message, then click submit.</p>
+			<fieldset class="right width60">
+			<legend>Personal Information</legend>
+			<label for="f_fName">First Name:</label> <input id="f_fName" name="f_fName" type="text" autofocus="autofocus" required="required" />
+			<br />
+			<label for="f_lName">Last Name:</label> <input id="f_lName" name="f_lName" type="text" required="required" />
+			<br />
+			<label for="f_email">Email Address:</label> <input id="f_email" name="f_email" type="email" required="required" />
+			<br />
+			<label for="f_tel">Your Primary Phone Number:</label> <input id="f_tel" name="f_tel" type="tel" maxlength="12" pattern="123-456-7890" placeholder="Example: 123-456-7890" />
+			<br />
+			<label for="f_region">Select your geographic region:</label> <input id="f_region" name="f_region" type="text" list="f_region_select" />
+			<datalist id="f_region_select">
+				<option value="North America - US">North America - US</option>
+				<option value="North America - Canada">North America - Canada</option>
+				<option value="UK">UK</option>
+				<option value="Africa">Africa</option>
+				<option value="China">China</option>
+				<option value="Europe">Europe</option>
+				<option value="South America">South America</option>
+			</datalist>
+			<br />
+			<label for="f_url">Your Website:</label> <input id="f_url" name="f_url" type="url" />
+			<br />
+			Please select an option that briefly describes your query:
+			<select id="f_query" name="f_query">
+				<option value="General Question" selected="selected">General Question</option>
+				<option value="Prospective Customer">Prospective Customer</option>
+				<option value="Partnership">Partner With Us</option>
+				<option value="Accolade">I love your eggs!</option>
+				<option value="Disgruntled">Your eggs stink!</option>
+				<option value="Job App">Job Openings</option>
+			</select>
+			</fieldset>
+			<p><label for="f_comments">Enter your comments below:</label></p>
+			<textarea id="f_comments" name="f_comments" rows="4" cols="50" placeholder="Enter any comments here." required="required"></textarea>
+			<p>Join our <i>Eggs-emplary Fan Club</i> and receive our monthly newsletter, discounts, and more!</p>
+			<p class="indent"><input id="f_newsletter_no" name="f_newsletter" type="radio" value="no" onclick="hide('f_second'); checkAll('f_contact', false);" /> <label for="f_newsletter_no">No way!</label></p>
+			<p class="indent" onclick=""><input id="f_newsletter_yes" type="radio" name="f_newsletter" value="yes" onclick="show('f_second')" /> <label for="f_newsletter_yes">Yes please!</label></p>
+				<fieldset id="f_second">
+					<legend>Your Interests</legend>
+					<p>Choose what you would like to receive the most information about.
+					<ul>
+						<li><input id="f_checkbox_eggs" name="f_checkbox_eggs" type="checkbox" /> <label for="f_checkbox_eggs">Eggs</label></li>
+						<li><input id="f_checkbox_chickens" name="f_checkbox_chickens" type="checkbox" /> <label for="f_checkbox_chickens">Chickens</label></li>
+						<li><input id="f_checkbox_farming" name="f_checkbox_farming" type="checkbox" /> <label for="f_checkbox_farming">Farming</label></li>
+						<li><input id="f_checkbox_recipes" name="f_checkbox_recipes" type="checkbox" /> <label for="f_checkbox_recipes">Recipes</label></li>
+					</ul>					
+				</fieldset><!--END SECOND FORM PART-->
+			<fieldset id="f_spambot">
+			<legend>Are you a Spambot?</legend>
+			<p><input id="f_spam_y" name="f_spam" type="radio" checked="checked" value="yes" /> <label for="f_spam_y">Yes. I am Clu the spambot, mining data.</label>
+			<br />
+			<input id="f_spam_n" name="f_spam" type="radio" value="no" /> <label for="f_spam_n">No. I'm a real person.</label>
+			<a href="#f_contact" onclick="show('f_spamInfo');"><img id="f_question" src="art/question.jpg" title="What is this? Click the image to learn more." alt="A question mark - Click on the image to learn more." /></a>
+			</p>
+			</fieldset>
+
+			<!--INFO ON THE SPAMBOT CHECK-->
+			<p id="f_spamInfo">Select the "No. I'm a real person" option in order to submit your form. <br />This area helps prevent spambots from sending us bogus info. <br /> <a href="#f_spambot" onclick="hide('f_spamInfo')">Close This</a></p>
+			
+			<p class="center"><input type="submit" value="Submit Form" /><input type="reset" value="Clear Form" /></p>
+		</form>
+	</div><!--END CONTACT FORM-->
+	<h3 id="location">Address and Location</h3>
+	<address itemscope itemtype="http://schema.org/CompanyInformation">
+	<p id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d25963.53481358633!2d-117.6676607!3d35.5674845!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3df7951da482b7f4!2sCerro+Coso+Community+College!5e0!3m2!1sen!2sus!4v1473745415038" width="600" height="450" style="border:0" allowfullscreen></iframe>
+	</p>
+	<p class="center"><span itemprop="name">Happy Egg Co.</span><br />
+	<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"></span>
+	<span itemprop="streetAddress">1234 Someplace Rd.</span><br>
+	<span itemprop="addressLocality">Nowhere</span>,
+	<span itemprop="addressRegion">Ca</span>
+	<span itemprop="postalCode">12345</span></p>
+	<p class="small10 center">Phone: <span itemprop="telephone">760-432-1589</span><br />
+	e-mail: <span itemprop="email">contact@happyeggs.com</span><br />
+	D-U-N-S®: <span itemprop="duns">098765432</span></p>
+	</address>
+<div class="clearBoth"></div>		
+</div><!--END MAIN DIV-->
+<footer>
+	<ul id="menu_bottom">
+		<li><a href="main.htm">Home</a></li>
+		<li><a href="about.htm">About</a></li>
+		<li><a href="contact.htm">Contact</a></li>
+		<li><a href="buy.htm">Buy</a></li>
+		<li><a href="recipes.htm">Recipes</a></li>
+		<li><a href="news.htm">News</a></li>
+		<li><a href="sitemap.htm">Sitemap</a></li>
+	</ul><!--END MENU_BOTTOM-->
+	<div id="stamp">
+		<script type="text/javascript">
+		//<![CDATA[
+		document.write("Copyright &copy; 2016 Sunny Eggs Co - Last Modified: " , document.lastModified)
+		//]]>
+		</script>
+	</div><!--END STAMP DIV-->
+</footer>
+</body>
+</html>

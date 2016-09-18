@@ -1,0 +1,376 @@
+/*-------ELEMENTS-------*/
+
+* {
+	margin: 0;
+}
+
+body {
+	background: #0bad13;
+}
+
+h1 {
+	float: left;
+	text-indent: -1000px;
+}
+
+h1 a {
+	background: url("art/logo_egg.jpg") 0 0 no-repeat;
+	display: block;
+	width: 400px;
+	height: 200px;
+}
+
+h1 a:hover{
+	background: url("art/logo_egg.jpg") -400px 0 no-repeat;
+}
+
+h2 {
+	font-family: Verdanda, sans-serif;
+	font-variant: small-caps;
+	text-shadow: 1px 1px 2px #000;
+	color: #fff;
+	border-top: 1px solid #000;	
+	border-left: 1px solid #000;
+	margin-bottom: 20px;
+}
+
+	/*#home h2 {
+		background: url("art/barn.png") 0 0 no-repeat;
+		text-indent: 100px;
+		height: 100px;
+		padding-right: 20px;
+		margin-right: 20px;
+		float: left;
+	} */
+
+h3 {
+	font-variant: small-caps;
+	margin-top: 30px;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;	
+}
+	
+address {
+	font-variant: small-caps;
+	font-style: normal;
+	text-align: center;
+	width: 70%;
+	padding-top: 150px;
+}
+
+
+fieldset {
+	margin-bottom: 15px;
+	width: 60%;
+}
+
+footer {
+	background-color: #0bad13;	
+	border-top: 5px solid #007d06;
+	padding-top: 20px;
+}
+
+form li {
+	list-style: none;
+}
+
+form p {
+	margin-bottom: 5px;
+}
+
+input[type="submit"] {
+	margin-right: 10px;
+}
+
+legend {
+	text-align: right;
+	font-variant: small-caps;
+	color: #999;
+}
+
+nav {
+	background: url("art/top_bg.jpg") 0 0;
+	border-bottom: 5px solid #007d06;	
+	width: 100%;
+	height: 200px;
+}
+
+p input {
+	margin-bottom: 5px;
+}
+
+
+/*-------IDS-------*/
+
+#contactForm {
+	width: 60%;
+	margin: 0 auto;
+	box-shadow: 1px 1px 2px #999;
+	padding: 15px;
+}
+
+#home #m_home a, #about #m_about a, #news #m_news a, #recipes #m_recipe a, #buy #m_buy a {
+	background: url("art/menu_egg.png") -130px 0 no-repeat;
+	text-decoration: underline;
+	color: #fff715;
+}
+
+#f_question {
+	box-shadow: 1px 1px 2px #000;
+}
+
+#f_second {
+	display: none;
+}
+
+#f_spamInfo {
+	font-size: 10pt;
+	display: none;
+	background-color: #fff;
+	box-shadow: 1px 1px 10px #fff;
+	text-align: center;
+	float: right;
+	width: 220px;
+	padding: 10px;
+	margin-top: -100px;
+	border-radius: 20%;
+}
+
+#main {
+	font-family: Arial, sans-serif;
+	background-color: #fffadc;
+	margin: 0 auto;
+	padding: 10px;
+	border-right: solid 2px #b7a95d;
+	border-left: solid 2px #b7a95d;
+	padding-right: 100px;
+	padding-left: 100px;
+	min-height: 400px;
+}
+
+#map {
+	float: left;
+	text-align: center;
+}
+
+#menu_top {
+	margin-left: 5em;
+	float: left;
+}
+
+#menu_top li{
+	list-style: none;
+	display: inline;
+}
+
+	#aboutSub, #recipeSub, #newsSub, #aboutSub ul, #recipeSub ul, #newsSub ul{
+		display: none;
+	}
+	
+#menu_top a {
+	text-align: center;
+	background: url("art/menu_egg.png") 0 0 no-repeat;	
+	width: 70px;
+	float: left;
+	margin-top: 30px;	
+	margin-right: 10px;
+	padding-top: 100px;
+	text-decoration: none;
+	color: #fff;
+	font-size: 14pt;
+	font-family: arial, sans-serif;
+	font-variant: small-caps;
+}
+
+#menu_top a:hover {
+	background: url("art/menu_egg.png") -130px 0 no-repeat;
+	text-decoration: underline;
+	color: #fff715;
+}
+
+	#m_about:hover #aboutSub{
+		display: block;
+		background-color: #0bad13;
+		position: absolute;
+		top: 170px;
+		margin-left: 70px;
+		padding: 10px;
+		box-shadow: 1px 1px 2px #000;
+		width: 5em;
+	}
+	
+	#m_recipe:hover #recipeSub{
+		display: block;
+		background-color: #0bad13;
+		position: absolute;
+		top: 150px;
+		margin-left: 230px;
+		padding: 10px;
+		box-shadow: 1px 1px 2px #000;
+		width: 6em;
+	}
+	
+		#m_news:hover #newsSub{
+		display: block;
+		background-color: #0bad13;
+		position: absolute;
+		top: 150px;
+		margin-left: 320px;
+		padding: 10px;
+		box-shadow: 1px 1px 2px #000;
+		width: 5em;
+	}
+	
+	#m_about:hover #aboutSub li, #m_recipe:hover #recipeSub li, #m_news:hover #recipeSub li {
+		display: block;
+	}
+
+	#m_about #aboutSub a, #m_recipe #recipeSub a, #m_news #newsSub a{
+		background-image: none;
+		padding: 5px;
+		margin: 0;
+		border-top: 1px solid #097a0e;
+		text-decoration: none;
+		color: #fff;
+	}
+
+	#m_about #aboutSub a:hover, #m_recipe #recipeSub a:hover, #m_news #newsSub a:hover{
+	text-decoration: underline;
+	color: #fff715;		
+	}
+	
+#menu_bottom {
+	font-family: arial, sans-serif;
+	font-size: 10pt;
+	text-align: center;
+	margin: 5px auto;
+}
+
+#menu_bottom a{
+	color: #fff;
+	text-decoration: none;
+	font-variant: small-caps;
+}
+
+#menu_bottom a:hover{
+	text-decoration: underline;
+	color: #fff715;
+}
+
+#menu_bottom li {
+	list-style-type: none;
+	display: inline;
+	margin-right: 1em;
+}
+
+#slider {
+	margin: 0 auto;
+	text-align: center;
+	width: 586px;
+	height: 440px;
+	box-shadow: 3px 3px 5px #888888;
+}
+
+#sliderButtons {
+	margin-top: -30px;
+}
+
+#sliderButtons a {
+	font-family: Arial, sans-serif;
+	font-size: 21pt;
+	color: #fff;
+	text-decoration: none;
+	text-shadow: 1px 1px 2px #000;	
+}
+
+#sliderButtons a:hover {
+	color: #999;
+	text-shadow: 2px 2px 2px #000;		
+}
+
+#goTo {
+	margin-bottom: 10px;
+}
+
+#goTo a:hover {
+	background-color: #999;	
+	box-shadow: 1px 1px 8px #000;
+}
+
+#stamp {
+	font-family: arial, sans-serif;
+	font-size: 8pt;
+	text-transform: small-caps;
+	text-align: center;
+	margin: 0 auto;	
+}
+
+/*-------CLASSES-------*/
+.center {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.clearBoth{
+	clear: both;
+}
+
+.dropCap {
+	font-family: Times New Roman;
+	font-size: 42pt;
+	padding-right: 2px;
+	margin-top: -15px;
+	float: left;
+}
+
+
+.goLeft {
+	margin-right: 250px;
+	padding-bottom: 30px;
+}
+
+.goRight {
+
+	margin-left: 250px;
+	padding-bottom: 30px;
+}
+
+.indent {
+	margin-left: 20px;
+}
+
+.quote {
+	background: url("art/quote.png") 0 0 no-repeat;
+	font-style: italic;
+	color: #777;
+	width: 80%;
+	padding-top: 20px;
+	padding-left: 50px;
+	margin-bottom: 20px;
+}
+
+ .small10 {
+	 font-size: 10pt;
+ }
+ 
+ .dot{
+	border-radius: 50%;
+	padding: 5px;
+	background-color: #fff;
+	font-size: 0;
+	box-shadow: 0px 0px 8px #fff;
+	margin: 0 5px;
+}
+
+ .dotGray {
+	background-color: #999;	
+	box-shadow: 1px 1px 8px #000; 
+ }
+ 
+ .right {
+	 text-align: right;
+ }
+ 
+ .width60 {
+	 width: 60%;
+ }

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+Author: Paul Kuttig
+Copyright  2016
+-->
+
+<html lang="en">
+<head>
+
+<title>Home - Sunny Eggs Co</title>
+<meta charset="UTF-8">
+
+<link href='main.css' rel='stylesheet' type='text/css' media="screen" />
+<script src="main.js" type="text/javascript"></script>
+<link rel="icon" href="art/favicon.ico">
+
+
+</head>
+
+
+<body id="home" onload="carousel()">
+<header>
+<h1><a href="main.htm">Sunny Eggs Co</a></h1>
+	<nav>
+		<ul id="menu_top">
+			<li><a id="m_home" href="main.htm">Home</a></li>
+			<li id="m_about"><a href="about.htm">About Us</a>
+				<ul id="aboutSub">
+					<li><a href="about.htm">About Sunny Eggs</a></li>
+					<li><a href="about.htm#facts">Egg Facts</a>
+						<ul>
+							<li><a href="about.htm#methods">How We Do It</a></li>
+							<li><a href="about.htm#nutrition">Nutrition Facts</a></li>
+						</ul>
+					</li>
+					<li><a href="contact.htm">Contact Sunny Farms</a>
+						<ul>
+							<li><a href="contact.htm#location">Visit Our Farms</a></li>
+						</ul>
+					</li>			
+				</ul>
+			</li>
+			<li id="m_buy"><a href="buy.htm">Buy</a></li>
+			<li id="m_recipe"><a href="recipes.htm">Recipes</a>
+				<ul id="recipeSub">
+					<li><a href="recipes.htm#scramble">Perfect Scrambled Eggs</a></li>
+					<li><a href="recipes.htm#omlete">Omlete Supreme</a></li>
+				</ul>
+			</li>
+			<li id="m_news"><a href="news.htm">News/Blog</a>
+				<ul id="newsSub">
+					<li><a href="news.htm">Weekly News and Blog</a></li>
+					<li><a href="news.htm#follow">Follow Our Birds</a>
+						<ul>
+							<li><a href="news.htm#liveStream">Bird Watching</a></li>
+							<li><a href="news.htm#bios">Bird Bios</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul><!--END MAIN MENU TOP-->
+	</nav>
+</header>
+<div id="main">
+	<article id="pageIntro">
+		<h2>Home</h2>
+		<p class="quote"><span class="dropCap">W</span>elcome to Sunny Eggs Company where our chickens derive the best that fresh air, sunshine, green grass, and high quality, non-GMO food can provide, which in turn provides you with the best eggs they can provide. - Professor Yolk</p>
+	</article><!--END PAGE INTRO-->
+	<aside>
+		<div id="slider">
+		  <img class="mySlides" src="art/slideshow/01.jpg" alt="Happy Eggs Slideshow" />
+		  <img class="mySlides" src="art/slideshow/02.jpg" alt="Happy Eggs Slideshow" />
+		  <img class="mySlides" src="art/slideshow/03.jpg" alt="Happy Eggs Slideshow" />
+			<div id="sliderButtons">
+			<a class="goLeft" onclick="advanceSlide(-1)" href="#goTo">&#10094;</a>
+			<a class="goRight" onclick="advanceSlide(1)" href="#goTo">&#10095;</a>
+			</div>
+			<div id="goTo">
+				<a class="dot" onclick="currentSlide(1)" href="#goTo"></a>
+				<a class="dot" onclick="currentSlide(2)" href="#goTo"></a>
+				<a class="dot" onclick="currentSlide(3)" href="#goTo"></a>
+			</div>
+		</div>
+	</aside>	
+</div><!--END MAIN DIV-->
+<footer>
+	<ul id="menu_bottom">
+		<li><a href="main.htm">Home</a></li>
+		<li><a href="about.htm">About</a></li>
+		<li><a href="contact.htm">Contact</a></li>
+		<li><a href="buy.htm">Buy</a></li>
+		<li><a href="recipes.htm">Recipes</a></li>
+		<li><a href="news.htm">News</a></li>
+		<li><a href="sitemap.htm">Sitemap</a></li>
+	</ul><!--END MENU_BOTTOM-->
+	<div id="stamp">
+		<script type="text/javascript">
+		//<![CDATA[
+		document.write("Copyright &copy; 2016 Sunny Eggs Co - Last Modified: " , document.lastModified)
+		//]]>
+		</script>
+	</div><!--END STAMP DIV-->
+</footer>
+</body>
+</html>
