@@ -63,8 +63,14 @@ Copyright  2016
 </header>
 <div id="main">
 	<article id="pageIntro">
+	<script>
+	document.write('<span  contextmenu="mymenu">');
+	</script><!--JS HACK FOR MENU ELEMENT-->
 		<h2>Contact Us</h2>
-		<p class="quote">We are always egg-static to hear from our customers and friends if you have questions, just want to let us know how truly awesome our eggs are, or if you have have an issue. Please fill out the form below and we will get bact to you as soon as humanly possible. Also, you can become a fan of our eggs by signing up for our newsletter. Just select the option in the form below. - Professor Yolk</p>	
+		<p class="quote">We are always egg-static to hear from our customers and friends if you have questions, just want to let us know how truly awesome our eggs are, or if you have have an issue. Please fill out the form below and we will get bact to you as soon as humanly possible. Also, you can become a fan of our eggs by signing up for our newsletter. Just select the option in the form below. - Professor Yolk</p>
+	<script>
+	document.write('<menu type="context" id="mymenu"><menuitem label="Refresh" onclick="window.location.reload();" icon="art/ico_reload.png"></menuitem><menu label="Share on..."><menuitem label="Twitter" icon="art/ico_twitter.png" onclick="window.open(\'//twitter.com/intent/tweet?text=\' + window.location.href);"></menuitem><menuitem label="Facebook" icon="art/ico_facebook.png" onclick="window.open(\'//facebook.com/sharer/sharer.php?u=\' + window.location.href);"></menuitem></menu><menuitem label="Email This Page" onclick="window.location=\'mailto:?body=\'+window.location.href;"></menuitem></menu></span>');
+	</script><!--END JS HACK FOR MENU ELEMENT-->
 	</article><!--END PAGE INTRO-->
 	<h3>Contact Form</h3>
 	<div id="contactForm">
@@ -129,14 +135,14 @@ Copyright  2016
 			<p><input id="f_spam_y" name="f_spam" type="radio" checked="checked" value="yes" /> <label for="f_spam_y">Yes. I am Clu the spambot, mining data.</label>
 			<br />
 			<input id="f_spam_n" name="f_spam" type="radio" value="no" /> <label for="f_spam_n">No. I'm a real person.</label>
-			<a href="#f_contact" onclick="show('f_spamInfo');"><img id="f_question" src="art/question.jpg" title="What is this? Click the image to learn more." alt="A question mark - Click on the image to learn more." /></a>
+			<button type="button" id="f_question" title="What is this? Click the image to learn more." onclick="show('f_spamInfo');"><img src="art/question.jpg" alt="A question mark." /></button>
 			</p>
 			</fieldset>
 
 			<!--INFO ON THE SPAMBOT CHECK-->
-			<p id="f_spamInfo">Select the "No. I'm a real person" option in order to submit your form. <br />This area helps prevent spambots from sending us bogus info. <br /> <a href="#f_spambot" onclick="hide('f_spamInfo')">Close This</a></p>
+			<p id="f_spamInfo">Select the &quot;No. I'm a real person.&quot; option in order to submit your form. <br />This area helps prevent spambots from sending us bogus info. <br /> <a href="#f_spambot" onclick="hide('f_spamInfo')">Close This</a></p>
 			
-			<p class="center"><input type="submit" value="Submit Form" /><input type="reset" value="Clear Form" /></p>
+			<p class="center"><button type="submit" value="Submit Form"><img src="art/envelope.png" alt="envelope" /><br />Send Message</button><button type="reset" value="Clear Form"><img src="art/sponge.png" alt="Sponge" /><br />Clear Content</button></p>
 		</form>
 	</div><!--END CONTACT FORM-->
 	<h3 id="location">Address and Location</h3>

@@ -27,11 +27,11 @@ h1 a:hover{
 h2 {
 	font-family: Verdanda, sans-serif;
 	font-variant: small-caps;
-	text-shadow: 1px 1px 2px #000;
-	color: #fff;
+	color: #000;
 	border-top: 1px solid #000;	
 	border-left: 1px solid #000;
 	margin-bottom: 20px;
+	text-shadow: 1px 1px 2px #999;	
 }
 
 	/*#home h2 {
@@ -46,8 +46,10 @@ h2 {
 h3 {
 	font-variant: small-caps;
 	margin-top: 30px;
+	margin-bottom: 10px;
 	border-bottom: 1px solid #000;
-	border-left: 1px solid #000;	
+	border-left: 1px solid #000;
+	color: #999;
 }
 	
 address {
@@ -58,6 +60,19 @@ address {
 	padding-top: 150px;
 }
 
+button {
+	border: 1px solid #fff;
+	box-shadow: 1px 1px 2px #000;
+	background: none;
+	margin: 20px;
+	padding: 0;
+	font-variant: small-caps;
+}
+
+button:hover {
+	border: 1px solid #999;
+	box-shadow: none;
+}
 
 fieldset {
 	margin-bottom: 15px;
@@ -113,10 +128,6 @@ p input {
 	background: url("art/menu_egg.png") -130px 0 no-repeat;
 	text-decoration: underline;
 	color: #fff715;
-}
-
-#f_question {
-	box-shadow: 1px 1px 2px #000;
 }
 
 #f_second {
@@ -367,6 +378,13 @@ p input {
 	box-shadow: 1px 1px 8px #000; 
  }
  
+ 
+.newsImg {
+	float: left;
+	box-shadow: 2px 2px 5px #000;
+	margin: 10px 10px 10px 0;
+}
+
  .right {
 	 text-align: right;
  }

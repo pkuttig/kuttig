@@ -64,11 +64,16 @@ function checkAll(formname, checktoggle)
 function checkForm(a) {
 	var x=document.getElementById(a);
 	var spam = document.getElementById('f_spam_y');
-	if (spam.value == "yes") {
+	if (spam.checked == true) {
 		alert('You need to select "No" on the spambot section.');
 		spam.focus();
 		return false;
 	}else {
-		return true;
+		var q = confirm('Are you sure you wish to submit this form?');
+	}
+	if(q==false) {
+	return false;
+	}else {
+	return true;
 	}
 }
