@@ -59,6 +59,7 @@ Copyright  2016
 <header>
 <h1><a href="main.htm">Sunny Eggs Co</a></h1>
 	<nav>
+	<h2 hidden>Navigation</h2>
 		<ul id="menu_top">
 			<li><a id="m_home" href="main.htm">Home</a></li>
 			<li id="m_about"><a href="about.htm">About Us</a>
@@ -68,16 +69,12 @@ Copyright  2016
 						<ul>
 							<li><a href="about.htm#methods">How We Do It</a></li>
 							<li><a href="about.htm#nutrition">Nutrition Facts</a></li>
-						</ul>
-					</li>
-					<li><a href="contact.htm">Contact Sunny Farms</a>
-						<ul>
 							<li><a href="contact.htm#location">Visit Our Farms</a></li>
 						</ul>
-					</li>			
+					</li>
 				</ul>
 			</li>
-			<li id="m_buy"><a href="buy.htm">Buy</a></li>
+			<li><a href="contact.htm">Contact Us</a>
 			<li id="m_recipe"><a href="recipes.htm">Recipes</a>
 				<ul id="recipeSub">
 					<li><a href="recipes.htm#scramble">Perfect Scrambled Eggs</a></li>
@@ -98,13 +95,24 @@ Copyright  2016
 		</ul><!--END MAIN MENU TOP-->
 	</nav>
 </header>
-<div id="main">
-	<article id="pageIntro">
-		<h2>Recipes</h2>
+<h2>Recipes</h2>
+<main id="mainContent">
+	<h3 hidden>Main Page Content</h3>
+	<div id="pageIntro">
 		<p class="quote">Think you know how to cook eggs? Think again! - Professor Yolk</p>
-	</article><!--END PAGE INTRO-->	
-	<article id="recipe">
-		<h3>Egg-ceptional Scrambled Eggs</h3>
+	</div><!--END PAGE INTRO-->
+	<article id="recipe01">
+		<h4>Egg-ceptional Scrambled Eggs</h4>
+		<p>Watch a video on how to scramble an egg with Professor Yolk</p>
+		<video controls preload="auto" width="800" height="600" poster="video/poster/scramble.jpg">
+			<source src="video/scrambled.mp4" type="video/mp4" />
+			<object data="video/scrambled.swf" type="application/x-shockwave-flash" width="800" height="600">
+			    <param name="movie" value="src=video/scrambled.swf" />
+				<param name="quality" value="high" />
+				<param name="allowscriptaccess" value="always" />
+				<param name="allowFullScreen" value="true" />
+			</object>
+		</video>
 		<p>Make this awesome egg scramble when plain scrambled eggs and salt just doesn't cut it anymore. You can add any ingredient that you wish, but for here I have included the three main ingredients that you need to make this &quot;egg-ceptional!&quot;</p>
 		<ul>
 			<li>PrepTime: 15M</li>
@@ -137,13 +145,13 @@ Copyright  2016
 			<li>Fat Content: 20.2 g</li>
 		</ul>
 	</article><!--END RECIPE-->
-</div><!--END MAIN DIV-->
+</main><!--END MAIN DIV-->
 <footer>
+	<h2 hidden>Footer</h2>
 	<ul id="menu_bottom">
 		<li><a href="main.htm">Home</a></li>
 		<li><a href="about.htm">About</a></li>
 		<li><a href="contact.htm">Contact</a></li>
-		<li><a href="buy.htm">Buy</a></li>
 		<li><a href="recipes.htm">Recipes</a></li>
 		<li><a href="news.htm">News</a></li>
 		<li><a href="sitemap.htm">Sitemap</a></li>
@@ -154,7 +162,11 @@ Copyright  2016
 		document.write("Copyright &copy; 2016 Sunny Eggs Co - Last Modified: " , document.lastModified)
 		//]]>
 		</script>
+	<address itemscope itemtype="http://schema.org/CompanyInformation">
+	<p><span itemprop="name">Happy Egg Co.</span><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"></span> &#9899; <span itemprop="streetAddress">1234 Someplace Rd.</span> &#9899; <span itemprop="addressLocality">Nowhere</span>, <span itemprop="addressRegion">Ca</span>	<span itemprop="postalCode">12345</span></p>
+	<p>Phone: <span itemprop="telephone">760-432-1589</span> &#9899; E-mail: <span itemprop="email">contact@happyeggs.com</span> &#9899; D-U-N-S®: <span itemprop="duns">098765432</span></p>
+	</address>			
 	</div><!--END STAMP DIV-->
-</footer>
+</footer>	
 </body>
 </html>

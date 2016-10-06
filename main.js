@@ -41,7 +41,12 @@ function carousel() {
 
 function show(a) {
 	var x=document.getElementById(a);
-	x.style.display="block";
+	var y=x.tagName;
+	if(y=="A") {
+		x.style.display="inline";
+	}else {
+		x.style.display="block";
+	}
 }
 
 function hide(a){

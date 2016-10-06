@@ -5,7 +5,7 @@
 }
 
 body {
-	background: #0bad13;
+	background: #fffadc;
 }
 
 h1 {
@@ -27,37 +27,52 @@ h1 a:hover{
 h2 {
 	font-family: Verdanda, sans-serif;
 	font-variant: small-caps;
-	color: #000;
-	border-top: 1px solid #000;	
-	border-left: 1px solid #000;
+	color: #fff;
 	margin-bottom: 20px;
-	text-shadow: 1px 1px 2px #999;	
+	padding: 5px 20px;
+	background: #007d06;
+	box-shadow: 2px 2px 4px #000;
 }
 
-	/*#home h2 {
-		background: url("art/barn.png") 0 0 no-repeat;
-		text-indent: 100px;
-		height: 100px;
-		padding-right: 20px;
-		margin-right: 20px;
-		float: left;
-	} */
-
-h3 {
+h4{
+	font-family: Verdanda, sans-serif;
+	font-size: 14pt;
 	font-variant: small-caps;
+	color: #fff;
+	margin: 20px auto 20px auto;
+	padding: 5px 10px;
+	background: #0bad13;
+	background: -webkit-linear-gradient(left, #007d06 , #fffadc); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, #007d06, #fffadc); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, #007d06, #fffadc); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, #007d06, #fffadc); /* Standard syntax */
+	width: 90%;
+}
+
+h5 {
+	font-variant: small-caps;
+	font-size: 12pt;
 	margin-top: 30px;
 	margin-bottom: 10px;
+	margin-left: 80px;
+	padding: 5px;
 	border-bottom: 1px solid #000;
 	border-left: 1px solid #000;
 	color: #999;
+	width: 70%;
 }
 	
 address {
 	font-variant: small-caps;
 	font-style: normal;
 	text-align: center;
-	width: 70%;
-	padding-top: 10px;
+
+}
+
+audio {
+	display: block;
+	text-align: center;
+	margin: 0 auto;
 }
 
 button {
@@ -80,7 +95,11 @@ fieldset {
 }
 
 footer {
-	background-color: #0bad13;	
+	background: #0bad13;
+    background: -webkit-linear-gradient(#007d06, #0bad13); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#007d06, #0bad13); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#007d06, #0bad13); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#007d06, #0bad13); /* Standard syntax */	
 	border-top: 5px solid #007d06;
 	padding-top: 20px;
 }
@@ -105,7 +124,6 @@ legend {
 
 nav {
 	background: url("art/top_bg.jpg") 0 0;
-	border-bottom: 5px solid #007d06;	
 	width: 100%;
 	height: 200px;
 }
@@ -114,6 +132,14 @@ p input {
 	margin-bottom: 5px;
 }
 
+video {
+	margin: 15px auto;
+	text-align: center;
+	display: block;
+	background: url("art/movieFrame.jpg") center center no-repeat;
+	padding-right: 50px;
+	padding-left: 50px;
+}
 
 /*-------IDS-------*/
 
@@ -122,12 +148,6 @@ p input {
 	margin: 0 auto;
 	box-shadow: 1px 1px 2px #999;
 	padding: 15px;
-}
-
-#home #m_home a, #about #m_about a, #news #m_news a, #recipes #m_recipe a, #buy #m_buy a {
-	background: url("art/menu_egg.png") -130px 0 no-repeat;
-	text-decoration: underline;
-	color: #fff715;
 }
 
 #f_second {
@@ -147,16 +167,49 @@ p input {
 	border-radius: 20%;
 }
 
-#main {
+
+#goTo {
+	margin-bottom: 10px;
+}
+
+#goTo a:hover {
+	background-color: #999;	
+	box-shadow: 1px 1px 8px #000;
+}
+
+#hideNews, #showNews{
+	font-weight: bold;
+	font-size: 12pt;
+	text-decoration: none;
+	color: #fff;
+	margin: 0 5px;
+}
+
+#hideNews:hover, #showNews:hover {
+	text-decoration: underline;
+}
+
+#home #m_home a, #about #m_about a, #news #m_news a, #recipes #m_recipe a, #buy #m_buy a {
+	background: url("art/menu_egg.png") -130px 0 no-repeat;
+	text-decoration: underline;
+	color: #fff715;
+}
+
+#livestream {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#mainContent {
 	font-family: Arial, sans-serif;
 	background-color: #fffadc;
 	margin: 0 auto;
-	padding: 10px;
-	border-right: solid 2px #b7a95d;
-	border-left: solid 2px #b7a95d;
-	padding-right: 100px;
-	padding-left: 100px;
 	min-height: 400px;
+}
+
+#mainContent p {
+	width: 80%;
+	margin: 0 auto;
 }
 
 #map {
@@ -191,6 +244,7 @@ p input {
 	font-size: 14pt;
 	font-family: arial, sans-serif;
 	font-variant: small-caps;
+	text-shadow: 1px 1px 1px #000;
 }
 
 #menu_top a:hover {
@@ -274,8 +328,38 @@ p input {
 	margin-right: 1em;
 }
 
-#slider {
+#newsArticles, #hideNews {
+	display: none;
+}
+
+#recipe01 {
+	width: 950px;
+	padding: 15px;
 	margin: 0 auto;
+	box-shadow: 2px 2px 4px #000;
+	border: 1px dashed #999;
+}
+
+	#recipe01 p, #recipe01 li {
+		color: #163796;
+		font-family: Tekton Pro, sans-serif;
+		font-size: 14pt;
+	}
+	
+	#recipe01 strong {
+		font-variant: small-caps;
+		font-size: 16pt;
+		text-decoration: underline;
+	}
+
+	#recipe01 video {
+		display: block;
+		margin: 10px auto;
+		text-align: center;
+	}
+
+#slider {
+	margin: 30px auto;
 	text-align: center;
 	width: 586px;
 	height: 440px;
@@ -289,7 +373,7 @@ p input {
 #sliderButtons a {
 	font-family: Arial, sans-serif;
 	font-size: 21pt;
-	color: #fff;
+	color: #fdf614;
 	text-decoration: none;
 	text-shadow: 1px 1px 2px #000;	
 }
@@ -297,15 +381,6 @@ p input {
 #sliderButtons a:hover {
 	color: #999;
 	text-shadow: 2px 2px 2px #000;		
-}
-
-#goTo {
-	margin-bottom: 10px;
-}
-
-#goTo a:hover {
-	background-color: #999;	
-	box-shadow: 1px 1px 8px #000;
 }
 
 #stamp {
@@ -326,6 +401,20 @@ p input {
 	clear: both;
 }
 
+.dot{
+	border-radius: 50%;
+	padding: 5px;
+	background-color: #fdf614;
+	font-size: 0;
+	box-shadow: 0px 0px 5px #999;
+	margin: 0 5px;
+}
+
+ .dotGray {
+	background-color: #999;	
+	box-shadow: 1px 1px 8px #000; 
+ }
+ 
 .dropCap {
 	font-family: Times New Roman;
 	font-size: 42pt;
@@ -363,21 +452,6 @@ p input {
  .small10 {
 	 font-size: 10pt;
  }
- 
- .dot{
-	border-radius: 50%;
-	padding: 5px;
-	background-color: #fff;
-	font-size: 0;
-	box-shadow: 0px 0px 8px #fff;
-	margin: 0 5px;
-}
-
- .dotGray {
-	background-color: #999;	
-	box-shadow: 1px 1px 8px #000; 
- }
- 
  
 .newsImg {
 	float: left;
