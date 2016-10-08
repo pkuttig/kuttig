@@ -82,3 +82,15 @@ function checkForm(a) {
 	return true;
 	}
 }
+
+function shrink(a) {
+	var x=document.getElementById(a);
+	x.style.height="0px";
+	x.style.width="0px";
+}
+
+function expand(a) {
+	var x=document.getElementById(a);
+	x.style.height="100%";
+	x.style.width="100%";
+}

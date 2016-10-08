@@ -1,3 +1,12 @@
+/*-------FONT FACES-------*/
+
+@font-face {
+    font-family: shaunSheep;
+    src: url("fonts/Shaun the Sheep.ttf");
+}
+
+
+
 /*-------ELEMENTS-------*/
 
 * {
@@ -25,7 +34,8 @@ h1 a:hover{
 }
 
 h2 {
-	font-family: Verdanda, sans-serif;
+	font-family: 'Architects Daughter', shaunSheep, cursive;
+	font-size: 28pt;
 	font-variant: small-caps;
 	color: #fff;
 	margin-bottom: 20px;
@@ -35,8 +45,8 @@ h2 {
 }
 
 h4{
-	font-family: Verdanda, sans-serif;
-	font-size: 14pt;
+	font-family: 'Architects Daughter', shaunSheep, cursive;
+	font-size: 18pt;
 	font-variant: small-caps;
 	color: #fff;
 	margin: 20px auto 20px auto;
@@ -51,15 +61,26 @@ h4{
 
 h5 {
 	font-variant: small-caps;
-	font-size: 12pt;
+	font-size: 14pt;
 	margin-top: 30px;
 	margin-bottom: 10px;
-	margin-left: 80px;
+	margin-left: 100px;
 	padding: 5px;
 	border-bottom: 1px solid #000;
 	border-left: 1px solid #000;
-	color: #999;
+	color: #5e5e5e;
 	width: 70%;
+}
+
+a, a:link, a:active, a:visited {
+	color: #2a9ac4;
+	font-weight: bold;
+
+}
+
+a:hover {
+	text-decoration: none;
+	color: #0bad13;
 }
 	
 address {
@@ -96,12 +117,14 @@ fieldset {
 
 footer {
 	background: #0bad13;
-    background: -webkit-linear-gradient(#007d06, #0bad13); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#007d06, #0bad13); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#007d06, #0bad13); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#007d06, #0bad13); /* Standard syntax */	
-	border-top: 5px solid #007d06;
-	padding-top: 20px;
+    background: -webkit-linear-gradient(#007d06, #fffadc); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#007d06, #fffadc); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#007d06, #fffadc); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#007d06, #fffadc); /* Standard syntax */	
+	border-top: 5px solid #006e05;
+	padding-top: 5px;
+	margin-top: 20px;
+	min-height: 150px;
 }
 
 form li {
@@ -150,6 +173,151 @@ video {
 	padding: 15px;
 }
 
+#fact01 {
+	display: block;
+	background: #fdf614;
+	background: -webkit-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Safari */
+	background: -o-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Opera 11.6 to 12.0 */
+	background: -moz-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Firefox 3.6 to 15 */
+	background: radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Standard syntax */		
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+    -webkit-transition: width 2s, height 2s, background 2s, font-size 2s, border 2s; /* Safari */2
+    transition: width 2s, height 2s, background 2s, font-size 2s, border 2s;
+	margin: 20px 0 40px 50px;
+	color: #fff;
+	text-align: center;
+	font-size: 0pt;
+	border: 30px solid #fff;
+	float: left;
+	box-shadow: 1px 1px 1px #999;
+}
+
+	#fact01:hover {
+		width: 200px;
+		height: 250px;
+		color: #999;
+		font-size: 14pt;
+		background: #fff;
+		background: -webkit-radial-gradient(circle, #fff, #fff, #f8f8f8); /* Safari */
+		background: -o-radial-gradient(circle, #fff, #fff, #f8f8f8); /* Opera 11.6 to 12.0 */
+		background: -moz-radial-gradient(circle, #fff, #fff, #f8f8f8); /* Firefox 3.6 to 15 */
+		background: radial-gradient(circle, #fff, #fff, #f8f8f8); /* Standard syntax */		
+		border: 1px solid #999;
+		box-shadow: 2px 2px 4px #000;
+		margin-right: 200px;
+	}
+
+	#fact01 p{
+		position: relative;
+		left: 200px;
+	}
+
+#fact02 {
+	display: block;
+	background: #fdf614;
+	background: -webkit-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Safari */
+	background: -o-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Opera 11.6 to 12.0 */
+	background: -moz-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Firefox 3.6 to 15 */
+	background: radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Standard syntax */	
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+    -webkit-transition: width 2s, height 2s, background 2s, font-size 2s, border 2s; /* Safari */2
+    transition: width 2s, height 2s, background 2s, font-size 2s, border 2s;
+	margin: 20px 0 40px 50px;
+	color: #fff;
+	text-align: center;
+	font-size: 0pt;
+	border: 30px solid #fff;
+	float: left;
+	box-shadow: 1px 1px 1px #999;	
+}
+
+	#fact02:hover {
+		width: 500px;
+		height: 100px;
+		color: #fff;
+		font-size: 14pt;
+		background: #0bad13;
+		border: 1px solid #0bad13;
+		border-radius: 0;
+		padding: 10px;
+		box-shadow: 2px 2px 4px #000;		
+}
+
+#fact03 {
+	display: block;
+	background: #fdf614;
+	background: -webkit-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Safari */
+	background: -o-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Opera 11.6 to 12.0 */
+	background: -moz-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Firefox 3.6 to 15 */
+	background: radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Standard syntax */	
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+    -webkit-transition: width 2s, height 2s, background 2s, font-size 2s, border 2s, transform 2s; /* Safari */2
+    transition: width 2s, height 2s, background 2s, font-size 2s, border 2s, transform 2s;
+	margin: 20px 0 40px 50px;
+	color: #fff;
+	text-align: center;
+	font-size: 0pt;
+	border: 30px solid #fff;
+	float: left;
+	box-shadow: 1px 1px 1px #999;	
+}
+
+	#fact03:hover {
+		width: 250px;
+		height: 250px;
+		color: #000;
+		font-size: 14pt;
+		background: #fdf614;
+		border: 1px solid #fdf614;
+		border-radius: 0;
+		padding: 10px;
+		box-shadow: 2px 2px 4px #999;
+		-ms-transform: rotate(7deg); /* IE 9 */
+		-webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+		transform: rotate(7deg);		
+}
+
+#fact04 {
+	display: block;
+	background: #fdf614;
+	background: -webkit-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Safari */
+	background: -o-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Opera 11.6 to 12.0 */
+	background: -moz-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Firefox 3.6 to 15 */
+	background: radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Standard syntax */	
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	margin: 20px 0 40px 50px;
+	color: #fff;
+	text-align: center;
+	font-size: 0pt;
+	border: 30px solid #fff;
+	float: left;
+	box-shadow: 1px 1px 1px #999;	
+}
+
+	#fact04:hover {
+		color: #000;
+		width: 300px;
+		font-size: 14pt;
+		background: none;
+		border: none;
+		border-radius: 0;
+		padding: 10px;
+		transform:skew(-10deg,-10deg);
+		box-shadow: none;		
+	}
+
+#facts {
+	clear: both;
+}
+
 #f_second {
 	display: none;
 }
@@ -189,10 +357,12 @@ video {
 	text-decoration: underline;
 }
 
-#home #m_home a, #about #m_about a, #news #m_news a, #recipes #m_recipe a, #buy #m_buy a {
+#home #m_home a, #about #m_about a, #news #m_news a, #recipes #m_recipe a, #contactUs #m_contact a {
 	background: url("art/menu_egg.png") -130px 0 no-repeat;
 	text-decoration: underline;
 	color: #fff715;
+	opacity: .80;
+    filter: alpha(opacity=80);	
 }
 
 #livestream {
@@ -224,11 +394,11 @@ video {
 
 #menu_top li{
 	list-style: none;
-	display: inline;
+	display: inline;	
 }
 
 	#aboutSub, #recipeSub, #newsSub, #aboutSub ul, #recipeSub ul, #newsSub ul{
-		display: none;
+		display: none;	
 	}
 	
 #menu_top a {
@@ -251,8 +421,9 @@ video {
 	background: url("art/menu_egg.png") -130px 0 no-repeat;
 	text-decoration: underline;
 	color: #fff715;
-}
+	}
 
+	
 	#m_about:hover #aboutSub{
 		display: block;
 		background-color: #0bad13;
@@ -260,8 +431,9 @@ video {
 		top: 170px;
 		margin-left: 70px;
 		padding: 10px;
-		box-shadow: 1px 1px 2px #000;
+		box-shadow: 2px 2px 2px #000;
 		width: 5em;
+		border-radius: 0 0 25px 25px;
 	}
 	
 	#m_recipe:hover #recipeSub{
@@ -269,10 +441,11 @@ video {
 		background-color: #0bad13;
 		position: absolute;
 		top: 150px;
-		margin-left: 230px;
+		margin-left: 220px;
 		padding: 10px;
-		box-shadow: 1px 1px 2px #000;
+		box-shadow: 2px 2px 2px #000;
 		width: 6em;
+		border-radius: 0 0 25px 25px;		
 	}
 	
 		#m_news:hover #newsSub{
@@ -280,10 +453,11 @@ video {
 		background-color: #0bad13;
 		position: absolute;
 		top: 150px;
-		margin-left: 320px;
+		margin-left: 310px;
 		padding: 10px;
-		box-shadow: 1px 1px 2px #000;
+		box-shadow: 2px 2px 2px #000;
 		width: 5em;
+		border-radius: 0 0 25px 25px;		
 	}
 	
 	#m_about:hover #aboutSub li, #m_recipe:hover #recipeSub li, #m_news:hover #recipeSub li {
@@ -463,6 +637,11 @@ video {
 	 text-align: right;
  }
  
+ .skewNote {
+	 transform:skew(10deg,10deg);
+ }
+ 
  .width60 {
 	 width: 60%;
  }
+ 
