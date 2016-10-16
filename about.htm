@@ -4,14 +4,22 @@ Author: Paul Kuttig
 Copyright  2016
 -->
 
-<html lang="en">
+<html class="no-js" lang="en">
 <head>
-
-<title>About - Sunny Eggs Co</title>
 <meta charset="UTF-8">
+<title>About - Sunny Eggs Co</title>
+
 
 <link href='main.css' rel='stylesheet' type='text/css' media="screen" />
 <script src="main.js" type="text/javascript"></script>
+<script src="modernizr.js"></script>
+<script src="oldBrowser.js"></script>
+<script>
+  if (!Modernizr.csstransitions) {
+    startFunc();
+  }
+</script>
+
 <link rel="icon" href="art/favicon.ico">
 
 <!--GOOGLE FONTS-->

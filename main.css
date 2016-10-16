@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: shaunSheep;
-    src: url("fonts/Shaun the Sheep.ttf");
+    src: url("fonts/Shaun the Sheep.ttf") format('embedded-opentype');
 }
 
 
@@ -183,7 +183,7 @@ video {
 	height: 60px;
 	width: 60px;
 	border-radius: 50%;
-    -webkit-transition: width 2s, height 2s, background 2s, font-size 2s, border 2s; /* Safari */2
+    -webkit-transition: width 2s, height 2s, background 2s, font-size 2s, border 2s; /* Safari */2;
     transition: width 2s, height 2s, background 2s, font-size 2s, border 2s;
 	margin: 20px 0 40px 50px;
 	color: #fff;
@@ -224,7 +224,7 @@ video {
 	height: 60px;
 	width: 60px;
 	border-radius: 50%;
-    -webkit-transition: width 2s, height 2s, background 2s, font-size 2s, border 2s; /* Safari */2
+    -webkit-transition: width 2s, height 2s, background 2s, font-size 2s, border 2s; /* Safari */2;
     transition: width 2s, height 2s, background 2s, font-size 2s, border 2s;
 	margin: 20px 0 40px 50px;
 	color: #fff;
@@ -257,7 +257,7 @@ video {
 	height: 60px;
 	width: 60px;
 	border-radius: 50%;
-    -webkit-transition: width 2s, height 2s, background 2s, font-size 2s, border 2s, transform 2s; /* Safari */2
+    -webkit-transition: width 2s, height 2s, background 2s, font-size 2s, border 2s, transform 2s; /* Safari */2;
     transition: width 2s, height 2s, background 2s, font-size 2s, border 2s, transform 2s;
 	margin: 20px 0 40px 50px;
 	color: #fff;
@@ -516,7 +516,7 @@ video {
 
 	#recipe01 p, #recipe01 li {
 		color: #163796;
-		font-family: Tekton Pro, sans-serif;
+		font-family: 'Tekton Pro', sans-serif;
 		font-size: 14pt;
 	}
 	
@@ -560,7 +560,7 @@ video {
 #stamp {
 	font-family: arial, sans-serif;
 	font-size: 8pt;
-	text-transform: small-caps;
+	font-variant: small-caps;
 	text-align: center;
 	margin: 0 auto;	
 }
@@ -590,7 +590,7 @@ video {
  }
  
 .dropCap {
-	font-family: Times New Roman;
+	font-family: 'Times New Roman', serif;
 	font-size: 42pt;
 	padding-right: 2px;
 	margin-top: -15px;
