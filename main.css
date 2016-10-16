@@ -511,7 +511,12 @@ video {
 	padding: 15px;
 	margin: 0 auto;
 	box-shadow: 2px 2px 4px #000;
-	border: 1px dashed #999;
+	outline: 1px dashed #999;
+}
+
+.boxshadow #recipe01 {
+	border-right: 2px solid #999;
+	border-bottom: 2px solid #999;
 }
 
 	#recipe01 p, #recipe01 li {
