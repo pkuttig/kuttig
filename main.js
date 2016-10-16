@@ -13,17 +13,12 @@ function currentSlide(n) {
 function showDivs(n) {
   var i;
   var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dots");
   if (n > x.length) {slideIndex = 1}
   if (n < 1) {slideIndex = x.length}
   for (i = 0; i < x.length; i++) {
      x[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-     dots[i].className = dots[i].className.replace("dotGray", "");
-  }
   x[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += "dotGray";
 }
 
 function carousel() {
@@ -41,7 +36,12 @@ function carousel() {
 
 function show(a) {
 	var x=document.getElementById(a);
-	x.style.display="block";
+	var y=x.tagName;
+	if(y=="A") {
+		x.style.display="inline";
+	}else {
+		x.style.display="block";
+	}
 }
 
 function hide(a){
@@ -76,4 +76,17 @@ function checkForm(a) {
 	}else {
 	return true;
 	}
+}
+
+function shrink(a) {
+	var x=document.getElementById(a);
+	x.style.height="0px";
+	x.style.width="0px";
+}
+
+function expand(a) {
+	var x=document.getElementById(a);
+	x.style.height="100%";
+	x.style.width="100%";
+>>>>>>> Project-4
 }
