@@ -88,5 +88,4 @@ function expand(a) {
 	var x=document.getElementById(a);
 	x.style.height="100%";
 	x.style.width="100%";
->>>>>>> Project-4
 }
