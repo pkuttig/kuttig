@@ -77,11 +77,15 @@ Copyright  2016
 	
 	<div id="facts">
 	<h4>Egg Facts</h4>
-	<p class="quote">Hover over the eggs below to see some egg-cellent facts! - Professor Yolk</p>
-		<div id="fact01"><p>Did you know that eggs are a great source of protein? Most adults need 46-56g of protein a day. Just one of our eggs contains 6g of protein!</p></div>
-		<div id="fact02"><p>Did you know that our chickens eat green grass, bugs, and seeds in a controlled area that is free from pesticides? We also feed them organic food and vegetables from our farms.</p></div>
-		<div id="fact03"><p>Post-It Note for Moms. Did you know that eating an egg each morning while pregnant not only provides you and your baby with needed nutrition, but helps with the sickness?</p></div>
-		<div id="fact04"><p>Put your eggs on their sides the night before hard boiling them in order to center the yolks.</p></div>		
+	<blockquote><p>Click on the eggs below to see some egg-cellent facts! - Professor Yolk</p></blockquote>
+		<p id="par01">Did you know that eggs are a great source of protein? Most adults need 46-56g of protein a day. Just one of our eggs contains 6g of protein! <a class="small10" href="#par02" onclick="change('#', '1')">Hide this</a></p>
+		<p id="par02">Did you know that our chickens eat green grass, bugs, and seeds in a controlled area that is free from pesticides? We also feed them organic food and vegetables from our farms. <a class="small10" href="#par02" onclick="change('#', '2')">Hide this</a><span></span></p>
+		<p id="par03">Post-It Note for Moms. Did you know that eating an egg each morning while pregnant not only provides you and your baby with needed nutrition, but helps with the sickness? <a class="small10" href="#par02" onclick="change('#', '3')">Hide this</a></p>
+		<p id="par04">Put your eggs on their sides the night before hard boiling them in order to center the yolks. <a class="small10" href="#par02" onclick="change('#', '4')">Hide this</a></p>		
+		<canvas id="fact01" onclick="change('oval', '1')"></canvas>
+		<canvas id="fact02" onclick="change('rectangle', '2')"></canvas>
+		<canvas id="fact03" onclick="change('square', '3')"></canvas>
+		<canvas id="fact04" onclick="change('tilted', '4')"></canvas>
 	</div>
 	<div class="clearBoth"></div>
 

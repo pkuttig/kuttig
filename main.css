@@ -1,800 +1,350 @@
-/*-------FONT FACES-------*/
+/*--------------CORE STYLES--------------*/
 
-@font-face {
-    font-family: shaunSheep;
-    src: url("fonts/Shaun the Sheep.ttf") format('embedded-opentype');
-}
+	/*-------FONT FACES-------*/
 
-
-
-/*-------ELEMENTS-------*/
-
-* {
-	margin: 0;
-}
-
-body {
-	background: #fffadc;
-	font-size: 1em;
-	box-sizing: border-box;	
-}
-
-h1 {
-	float: left;
-	text-indent: -1000px;
-}
-
-h1 a {
-	background: url("art/logo_egg.jpg") 0 0 no-repeat;
-	display: block;
-	width: 400px;
-	height: 200px;
-}
-
-h1 a:hover{
-	background: url("art/logo_egg.jpg") -400px 0 no-repeat;
-}
-
-h2 {
-	font-family: 'Architects Daughter', shaunSheep, cursive;
-	font-size: 2.25em;
-	font-variant: small-caps;
-	color: #fff;
-	margin-bottom: 20px;
-	padding: 5px 20px;
-	background: #007d06;
-	box-shadow: 2px 2px 4px #000;
-}
-
-h4{
-	font-family: 'Architects Daughter', shaunSheep, cursive;
-	font-size: 1.60em;
-	font-variant: small-caps;
-	color: #fff;
-	margin: 20px auto 20px auto;
-	padding: 5px 10px;
-	background: #0bad13;
-	background: -webkit-linear-gradient(left, #007d06 , #fffadc); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(right, #007d06, #fffadc); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(right, #007d06, #fffadc); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(to right, #007d06, #fffadc); /* Standard syntax */
-	width: 90%;
-}
-
-h5 {
-	font-variant: small-caps;
-	font-size: 1.25em;
-	margin-top: 30px;
-	margin-bottom: 10px;
-	margin-left: 100px;
-	padding: 5px;
-	border-bottom: 1px solid #000;
-	border-left: 1px solid #000;
-	color: #5e5e5e;
-	width: 70%;
-}
-
-a, a:link, a:active, a:visited {
-	color: #2a9ac4;
-	font-weight: bold;
-
-}
-
-a:hover {
-	text-decoration: none;
-	color: #0bad13;
-}
-	
-address {
-	font-variant: small-caps;
-	font-style: normal;
-	text-align: center;
-
-}
-
-audio {
-	display: block;
-	text-align: center;
-	margin: 0 auto;
-}
-
-button {
-	border: 1px solid #fff;
-	box-shadow: 1px 1px 2px #000;
-	background: none;
-	margin: 20px;
-	padding: 0;
-	font-variant: small-caps;
-}
-
-button:hover {
-	border: 1px solid #999;
-	box-shadow: none;
-}
-
-fieldset {
-	margin-bottom: 15px;
-	width: 60%;
-}
-
-footer {
-	background: #0bad13;
-    background: -webkit-linear-gradient(#007d06, #fffadc); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#007d06, #fffadc); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#007d06, #fffadc); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#007d06, #fffadc); /* Standard syntax */	
-	border-top: 5px solid #006e05;
-	padding-top: 5px;
-	margin-top: 20px;
-	min-height: 150px;
-}
-
-form li {
-	list-style: none;
-}
-
-form p {
-	margin-bottom: 5px;
-}
-
-input[type="submit"] {
-	margin-right: 10px;
-}
-
-legend {
-	text-align: right;
-	font-variant: small-caps;
-	color: #999;
-}
-
-main {
-	margin: 0 auto;
-}
-
-nav {
-	background: url("art/top_bg.jpg") 0 0;
-	width: 100%;
-	height: 200px;
-}
-
-p input {
-	margin-bottom: 5px;
-}
-
-video {
-	margin: 15px auto;
-	text-align: center;
-	display: block;
-	background: url("art/movieFrame.jpg") center center no-repeat;
-	padding-right: 50px;
-	padding-left: 50px;
-}
-
-/*-------IDS-------*/
-
-#contactForm {
-	width: 60%;
-	margin: 0 auto;
-	box-shadow: 1px 1px 2px #999;
-	padding: 15px;
-}
-
-#fact01 {
-	display: block;
-	background: #fdf614;
-	background: -webkit-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Safari */
-	background: -o-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Opera 11.6 to 12.0 */
-	background: -moz-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Firefox 3.6 to 15 */
-	background: radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Standard syntax */		
-	height: 60px;
-	width: 60px;
-	border-radius: 50%;
-    -webkit-transition: width 2s, height 2s, background 2s, font-size 2s, border 2s; /* Safari */2;
-    transition: width 2s, height 2s, background 2s, font-size 2s, border 2s;
-	margin: 20px 0 40px 50px;
-	color: #fff;
-	text-align: center;
-	font-size: 0em;
-	border: 30px solid #fff;
-	float: left;
-	box-shadow: 1px 1px 1px #999;
-}
-
-	#fact01:hover {
-		width: 200px;
-		height: 250px;
-		color: #000;
-		font-size: 1em;
-		background: #fff;
-		background: -webkit-radial-gradient(circle, #fff, #fff, #f8f8f8); /* Safari */
-		background: -o-radial-gradient(circle, #fff, #fff, #f8f8f8); /* Opera 11.6 to 12.0 */
-		background: -moz-radial-gradient(circle, #fff, #fff, #f8f8f8); /* Firefox 3.6 to 15 */
-		background: radial-gradient(circle, #fff, #fff, #f8f8f8); /* Standard syntax */		
-		border: 1px solid #999;
-		box-shadow: 2px 2px 4px #000;
-		margin-right: 200px;
+	@font-face {
+		font-family: shaunSheep;
+		src: url("fonts/Shaun the Sheep.ttf") format('embedded-opentype');
 	}
 
-	#fact01 p{
-		position: relative;
-		left: 200px;
-	}
+	/*-------ELEMENTS-------*/
 
-#fact02 {
-	display: block;
-	background: #fdf614;
-	background: -webkit-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Safari */
-	background: -o-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Opera 11.6 to 12.0 */
-	background: -moz-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Firefox 3.6 to 15 */
-	background: radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Standard syntax */	
-	height: 60px;
-	width: 60px;
-	border-radius: 50%;
-    -webkit-transition: width 2s, height 2s, background 2s, font-size 2s, border 2s; /* Safari */2;
-    transition: width 2s, height 2s, background 2s, font-size 2s, border 2s;
-	margin: 20px 0 40px 50px;
-	color: #fff;
-	text-align: center;
-	font-size: 0em;
-	border: 30px solid #fff;
-	float: left;
-	box-shadow: 1px 1px 1px #999;	
-}
-
-	#fact02:hover {
-		width: 500px;
-		height: 100px;
-		color: #fff;
-		font-size: 1em;
-		background: #0bad13;
-		border: 1px solid #0bad13;
-		border-radius: 0;
-		padding: 10px;
-		box-shadow: 2px 2px 4px #000;		
-}
-
-#fact03 {
-	display: block;
-	background: #fdf614;
-	background: -webkit-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Safari */
-	background: -o-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Opera 11.6 to 12.0 */
-	background: -moz-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Firefox 3.6 to 15 */
-	background: radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Standard syntax */	
-	height: 60px;
-	width: 60px;
-	border-radius: 50%;
-    -webkit-transition: width 2s, height 2s, background 2s, font-size 2s, border 2s, transform 2s; /* Safari */2;
-    transition: width 2s, height 2s, background 2s, font-size 2s, border 2s, transform 2s;
-	margin: 20px 0 40px 50px;
-	color: #fff;
-	text-align: center;
-	font-size: 0em;
-	border: 30px solid #fff;
-	float: left;
-	box-shadow: 1px 1px 1px #999;	
-}
-
-	#fact03:hover {
-		width: 250px;
-		height: 250px;
-		color: #000;
-		font-size: 1em;
-		background: #fdf614;
-		border: 1px solid #fdf614;
-		border-radius: 0;
-		padding: 10px;
-		box-shadow: 2px 2px 4px #999;
-		-ms-transform: rotate(7deg); /* IE 9 */
-		-webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
-		transform: rotate(7deg);		
-}
-
-#fact04 {
-	display: block;
-	background: #fdf614;
-	background: -webkit-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Safari */
-	background: -o-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Opera 11.6 to 12.0 */
-	background: -moz-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Firefox 3.6 to 15 */
-	background: radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Standard syntax */	
-	height: 60px;
-	width: 60px;
-	border-radius: 50%;
-	margin: 20px 0 40px 50px;
-	color: #fff;
-	text-align: center;
-	font-size: 0em;
-	border: 30px solid #fff;
-	float: left;
-	box-shadow: 1px 1px 1px #999;	
-}
-
-	#fact04:hover {
-		color: #000;
-		width: 300px;
-		font-size: 1em;
-		background: none;
-		border: none;
-		border-radius: 0;
-		padding: 10px;
-		transform:skew(-10deg,-10deg);
-		box-shadow: none;		
-	}
-
-#facts {
-	clear: both;
-}
-
-#f_second {
-	display: none;
-}
-
-#f_spamInfo {
-	font-size: .90em;
-	display: none;
-	background-color: #fff;
-	box-shadow: 1px 1px 10px #fff;
-	text-align: center;
-	float: right;
-	width: 220px;
-	padding: 10px;
-	margin-top: -100px;
-	border-radius: 20%;
-}
-
-
-#goTo {
-	margin-bottom: 10px;
-}
-
-#goTo a:hover {
-	background-color: #999;	
-	box-shadow: 1px 1px 8px #000;
-}
-
-#hideNews, #showNews{
-	font-weight: bold;
-	font-size: .75em;
-	text-decoration: none;
-	color: #fff;
-	margin: 0 5px;
-}
-
-#hideNews:hover, #showNews:hover {
-	text-decoration: underline;
-}
-
-#home #m_home a, #about #m_about a, #news #m_news a, #recipes #m_recipe a, #contactUs #m_contact a {
-	background: url("art/menu_egg.png") -130px 0 no-repeat;
-	text-decoration: underline;
-	color: #fff715;
-	opacity: .80;
-    filter: alpha(opacity=80);	
-}
-
-#livestream {
-	margin: 0 auto;
-	text-align: center;
-}
-
-#mainContent {
-	font-family: Arial, sans-serif;
-	background-color: #fffadc;
-	margin: 0 auto;
-	min-height: 400px;
-}
-
-#mainContent p {
-	width: 80%;
-	margin: 0 auto;
-}
-
-#map {
-	float: left;
-	text-align: center;
-}
-
-#menu_top {
-	margin-left: 5em;
-	float: left;
-}
-
-#menu_top li{
-	list-style: none;
-	display: inline;	
-}
-
-	#aboutSub, #recipeSub, #newsSub, #aboutSub ul, #recipeSub ul, #newsSub ul{
-		display: none;	
-	}
-	
-#menu_top a {
-	text-align: center;
-	background: url("art/menu_egg.png") 0 0 no-repeat;	
-	width: 70px;
-	float: left;
-	margin-top: 30px;	
-	margin-right: 10px;
-	padding-top: 100px;
-	text-decoration: none;
-	color: #fff;
-	font-size: 1.15em;
-	font-family: arial, sans-serif;
-	font-variant: small-caps;
-	text-shadow: 1px 1px 1px #000;
-}
-
-#menu_top a:hover {
-	background: url("art/menu_egg.png") -130px 0 no-repeat;
-	text-decoration: underline;
-	color: #fff715;
-	}
-
-	
-	#m_about:hover #aboutSub{
-		display: block;
-		background-color: #0bad13;
-		position: absolute;
-		top: 170px;
-		margin-left: 70px;
-		padding: 10px;
-		box-shadow: 2px 2px 2px #000;
-		width: 5em;
-		border-radius: 0 0 25px 25px;
-	}
-	
-	#m_recipe:hover #recipeSub{
-		display: block;
-		background-color: #0bad13;
-		position: absolute;
-		top: 150px;
-		margin-left: 220px;
-		padding: 10px;
-		box-shadow: 2px 2px 2px #000;
-		width: 6em;
-		border-radius: 0 0 25px 25px;		
-	}
-	
-		#m_news:hover #newsSub{
-		display: block;
-		background-color: #0bad13;
-		position: absolute;
-		top: 150px;
-		margin-left: 310px;
-		padding: 10px;
-		box-shadow: 2px 2px 2px #000;
-		width: 5em;
-		border-radius: 0 0 25px 25px;		
-	}
-	
-	#m_about:hover #aboutSub li, #m_recipe:hover #recipeSub li, #m_news:hover #recipeSub li {
-		display: block;
-	}
-
-	#m_about #aboutSub a, #m_recipe #recipeSub a, #m_news #newsSub a{
-		background-image: none;
-		padding: 5px;
+	* {
 		margin: 0;
-		border-top: 1px solid #097a0e;
-		text-decoration: none;
-		color: #fff;
 	}
 
-	#m_about #aboutSub a:hover, #m_recipe #recipeSub a:hover, #m_news #newsSub a:hover{
-	text-decoration: underline;
-	color: #fff715;		
-	}
-	
-#menu_bottom {
-	font-family: arial, sans-serif;
-	font-size: .90em;
-	text-align: center;
-	margin: 5px auto;
-}
-
-#menu_bottom a{
-	color: #fff;
-	text-decoration: none;
-	font-variant: small-caps;
-}
-
-#menu_bottom a:hover{
-	text-decoration: underline;
-	color: #fff715;
-}
-
-#menu_bottom li {
-	list-style-type: none;
-	display: inline;
-	margin-right: 1em;
-}
-
-#newsArticles, #hideNews {
-	display: none;
-}
-
-#recipe01 {
-	width: 90%;
-	padding: 15px;
-	margin: 0 auto;
-	box-shadow: 2px 2px 4px #000;
-	outline: 1px dashed #999;
-}
-
-.boxshadow #recipe01 {
-	border-right: 2px solid #999;
-	border-bottom: 2px solid #999;
-}
-
-	#recipe01 p, #recipe01 li {
-		color: #163796;
-		font-family: 'Tekton Pro', sans-serif;
-		font-size: 1em;
-	}
-	
-	#recipe01 strong {
-		font-variant: small-caps;
-		font-size: 16pt;
-		text-decoration: underline;
-	}
-
-	#recipe01 video {
-		display: block;
-		margin: 10px auto;
-		text-align: center;
-		width: 85%;
-	}
-
-#slider {
-	margin: 30px auto;
-	text-align: center;
-	width: 586px;
-	height: 440px;
-	box-shadow: 3px 3px 5px #888888;
-}
-
-#sliderButtons {
-	
-	margin: -30px auto 0 auto;
-}
-
-#sliderButtons a {
-	font-family: Arial, sans-serif;
-	font-size: 21pt;
-	color: #fdf614;
-	text-decoration: none;
-	text-shadow: 1px 1px 2px #000;	
-}
-
-#sliderButtons a:hover {
-	color: #999;
-	text-shadow: 2px 2px 2px #000;		
-}
-
-#stamp {
-	font-family: arial, sans-serif;
-	font-size: .75em;
-	font-variant: small-caps;
-	text-align: center;
-	margin: 0 auto;	
-}
-
-/*-------CLASSES-------*/
-.center {
-	text-align: center;
-	margin: 0 auto;
-}
-
-.clearBoth{
-	clear: both;
-}
-
-.dot{
-	border-radius: 50%;
-	padding: 5px;
-	background-color: #fdf614;
-	font-size: 0;
-	box-shadow: 0px 0px 5px #999;
-	margin: 0 5px;
-}
-
- .dotGray {
-	background-color: #999;	
-	box-shadow: 1px 1px 8px #000; 
- }
- 
-.dropCap {
-	font-family: 'Times New Roman', serif;
-	font-size: 3em;
-	padding-right: 2px;
-	margin-top: -15px;
-	float: left;
-}
-
-
-.goLeft {
-	margin-right: 25%;
-	padding-bottom: 30px;
-}
-
-.goRight {
-
-	margin-left: 25%;
-	padding-bottom: 30px;
-}
-
-.indent {
-	margin-left: 20px;
-}
-
-.quote {
-	background: url("art/quote.png") 0 0 no-repeat;
-	font-style: italic;
-	color: #777;
-	width: 80%;
-	padding-top: 20px;
-	padding-left: 50px;
-	margin-bottom: 20px;
-}
-
- .small10 {
-	 font-size: .75em;
- }
- 
-.newsImg {
-	float: left;
-	box-shadow: 2px 2px 5px #000;
-	margin: 10px 10px 10px 0;
-}
-
- .right {
-	 text-align: right;
- }
- 
- .skewNote {
-	 transform:skew(10deg,10deg);
- }
- 
- .width60 {
-	 width: 60%;
- }
- 
- /* ------- MEDIA QUERY ------- */
-
- @media all and (max-width: 950px) {
 	body {
-		font-size: .90em;
+		background: #fffadc;
+		font-size: 1em;
+		box-sizing: border-box;
 		overflow-x: hidden;
-		margin: 0 auto;
-		padding: 0;
 	}
-	
-	img, video {
-		width: 80%;
-		height: 60%;
-		margin: 0 auto;
-		padding: 0;
-	}
-	
-	article img {
-		width: 200px;
-		height: 141px;
+
+	h1 {
+		float: left;
+		text-indent: -1000px;
 	}
 
 	h1 a {
-		width: 400px;
-		float: left;
-		padding: 0;
-		margin: 0;
+		display: block;
 	}
 	
 	h2 {
+		font-family: 'Architects Daughter', shaunSheep, cursive;
+		font-variant: small-caps;
+		color: #fff;
+		background: #007d06;
+		box-shadow: 2px 2px 4px #000;
+		width: 100%;
+		clear: both;
+	}
 
-		box-shadow: none;
+	h4{
+		font-family: 'Architects Daughter', shaunSheep, cursive;
+		font-variant: small-caps;
+		color: #fff;
+		background: #0bad13;
+		background: -webkit-linear-gradient(left, #007d06 , #fffadc); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(right, #007d06, #fffadc); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(right, #007d06, #fffadc); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(to right, #007d06, #fffadc); /* Standard syntax */
+		width: 90%;
 	}
 	
 	h5 {
-		margin-left: 5%;
-		width: 90%;
-	}
-
-	fieldset {
-		margin-bottom: 15px;
-		width: 90%;
-	}
-
-	header {
-	background: url('art/top_bg.jpg') 0 0;
-	height: 200px;
-	width: 100%;
-	margin: 0;
+		font-variant: small-caps;
+		border-bottom: 1px solid #000;
+		border-left: 1px solid #000;
+		color: #5e5e5e;
+		width: 70%;
 	}
 	
-	main {
+	a, a:link, a:active, a:visited {
+		color: #2a9ac4;
+		font-weight: bold;
+	}
+
+	a:hover {
+		text-decoration: none;
+		color: #0bad13;
+	}
+	
+	address {
+		font-variant: small-caps;
+		font-style: normal;
+		text-align: center;
+	}
+	
+		audio {
+		display: block;
+		text-align: center;
+		margin: 0 auto;
+	}
+	
+	blockquote {
+		background: url("art/quote.png") 0 0 no-repeat;
+		font-style: italic;
+		color: #777;
+		width: 80%;
+	}
+	
+	button {
+		border: 1px solid #fff;
+		box-shadow: 1px 1px 2px #000;
+		background: none;
+		margin: 20px;
+		padding: 0;
+		font-variant: small-caps;
+	}
+
+	button:hover {
+		border: 1px solid #999;
+		box-shadow: none;
+	}
+	
+	footer {
+		background: #0bad13;
+		background: -webkit-linear-gradient(#007d06, #fffadc); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(#007d06, #fffadc); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(#007d06, #fffadc); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(#007d06, #fffadc); /* Standard syntax */	
+		border-top: 5px solid #006e05;
+	}
+	
+	form li {
+		list-style: none;
+	}
+	
+	header {
+		width: 100%;
+		float: left;
 		margin: 0;
+	}	
+
+	input[type="submit"] {
+		margin-right: 10px;
+	}
+	
+	legend {
+		text-align: right;
+		font-variant: small-caps;
+		color: #999;
+	}
+
+	main {
+		margin: 0 auto;
+		padding: 10px 0;
 	}
 	
 	nav {
-		height: 75px;
 		width: 100%;
-		text-align: center;
-		margin: 0;
+		height: 200px;
+		position: absolute;
 	}
 	
+	
+	video {
+		margin: 15px auto;
+		text-align: center;
+		display: block;
+		background: url("art/movieFrame.jpg") center center no-repeat;
+		padding-right: 50px;
+		padding-left: 50px;
+	}
+	
+	
+	/*-------IDS-------*/
 	#contactForm {
-		width: 90%;
-		padding: 15px;
+		margin: 0 auto;
+		box-shadow: 1px 1px 2px #999;
+	}
+	
+	#facts canvas:hover {
+		cursor: pointer;
+	}
+	
+	#fact01 {
+		display: block;
+		background: #fdf614;
+		background: -webkit-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Safari */
+		background: -o-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Opera 11.6 to 12.0 */
+		background: -moz-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Firefox 3.6 to 15 */
+		background: radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Standard syntax */		
+		height: 60px;
+		width: 60px;
+		border-radius: 50%;
+		-webkit-transition: width 2s, height 2s, background 2s, font-size 2s, border 2s; /* Safari */2;
+		transition: width 2s, height 2s, background 2s, font-size 2s, border 2s;
+		margin: 20px 0 40px 50px;
+		color: #fff;
+		text-align: center;
+		font-size: 0em;
+		border: 30px solid #fff;
+		float: left;
+		box-shadow: 1px 1px 1px #999;
 	}
 
+
+		#fact01.oval {
+			width: 200px;
+			height: 250px;
+			background: #fff;
+			background: -webkit-radial-gradient(circle, #fff, #fff, #f8f8f8); /* Safari */
+			background: -o-radial-gradient(circle, #fff, #fff, #f8f8f8); /* Opera 11.6 to 12.0 */
+			background: -moz-radial-gradient(circle, #fff, #fff, #f8f8f8); /* Firefox 3.6 to 15 */
+			background: radial-gradient(circle, #fff, #fff, #f8f8f8); /* Standard syntax */		
+			border: 1px solid #999;
+			box-shadow: 2px 2px 4px #000;
+		}
+
+
+	#fact02 {
+		display: block;
+		background: #fdf614;
+		background: -webkit-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Safari */
+		background: -o-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Opera 11.6 to 12.0 */
+		background: -moz-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Firefox 3.6 to 15 */
+		background: radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Standard syntax */	
+		height: 60px;
+		width: 60px;
+		border-radius: 50%;
+		-webkit-transition: width 2s, height 2s, background 2s, font-size 2s, border 2s; /* Safari */2;
+		transition: width 2s, height 2s, background 2s, font-size 2s, border 2s;
+		margin: 20px 0 40px 50px;
+		color: #fff;
+		text-align: center;
+		font-size: 0em;
+		border: 30px solid #fff;
+		float: left;
+		box-shadow: 1px 1px 1px #999;	
+	}
+
+		#fact02.rectangle {
+			width: 600px;
+			height: 200px;
+			border: none;
+			border-radius: 0;
+			padding: 0px;
+			box-shadow: 2px 2px 4px #000;		
+	}
+
+
+	#fact03 {
+		display: block;
+		background: #fdf614;
+		background: -webkit-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Safari */
+		background: -o-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Opera 11.6 to 12.0 */
+		background: -moz-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Firefox 3.6 to 15 */
+		background: radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Standard syntax */	
+		height: 60px;
+		width: 60px;
+		border-radius: 50%;
+		-webkit-transition: width 2s, height 2s, background 2s, font-size 2s, border 2s, transform 2s; /* Safari */2;
+		transition: width 2s, height 2s, background 2s, font-size 2s, border 2s, transform 2s;
+		margin: 20px 0 40px 50px;
+		color: #fff;
+		text-align: center;
+		font-size: 0em;
+		border: 30px solid #fff;
+		float: left;
+		box-shadow: 1px 1px 1px #999;	
+	}
+
+		#fact03.square {
+			width: 250px;
+			height: 250px;
+			color: #000;
+			font-size: 1em;
+			background: #fdf614;
+			border: 1px solid #fdf614;
+			border-radius: 0;
+			padding: 0;
+			box-shadow: 2px 2px 4px #999;
+			-ms-transform: rotate(7deg); /* IE 9 */
+			-webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+			transform: rotate(7deg);	
+	}
+
+	#fact04 {
+		display: block;
+		background: #fdf614;
+		background: -webkit-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Safari */
+		background: -o-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Opera 11.6 to 12.0 */
+		background: -moz-radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Firefox 3.6 to 15 */
+		background: radial-gradient(circle, #fdf614, #fdf614, #fdd914); /* Standard syntax */	
+		height: 60px;
+		width: 60px;
+		border-radius: 50%;
+		margin: 20px 0 40px 50px;
+		color: #fff;
+		text-align: center;
+		font-size: 0em;
+		border: 30px solid #fff;
+		float: left;
+		box-shadow: 1px 1px 1px #999;	
+		transition: all 2s;
+	}
+
+		#fact04.tilted {
+			width: 200px;
+			height: 250px;
+			background: #fff;
+			background: -webkit-radial-gradient(circle, #fff, #fff, #f8f8f8); /* Safari */
+			background: -o-radial-gradient(circle, #fff, #fff, #f8f8f8); /* Opera 11.6 to 12.0 */
+			background: -moz-radial-gradient(circle, #fff, #fff, #f8f8f8); /* Firefox 3.6 to 15 */
+			background: radial-gradient(circle, #fff, #fff, #f8f8f8); /* Standard syntax */		
+			border: 1px solid #999;
+			box-shadow: 2px 2px 4px #000;
+			transform:rotate(90deg);
+		}
+
+	#facts {
+		clear: both;
+	}
+	
+	#f_spamInfo {
+		display: none;
+		background-color: #fff;
+		box-shadow: 1px 1px 10px #fff;
+		text-align: center;
+		border-radius: 20%;
+	}
+	
+	#goTo {
+		margin-bottom: 10px;
+	}
+
+	#goTo a:hover {
+		background-color: #999;	
+		box-shadow: 1px 1px 8px #000;
+	}
+	
+	#hideNews, #showNews{
+		font-weight: bold;
+		text-decoration: none;
+		color: #fff;
+	}
+
+	#hideNews:hover, #showNews:hover {
+		text-decoration: underline;
+	}
 	
 	#home #m_home a, #about #m_about a, #news #m_news a, #recipes #m_recipe a, #contactUs #m_contact a {
-		background: url("art/menu_egg2.png") -55px 0 no-repeat;
+		text-decoration: underline;
+		color: #fff715;
+		opacity: .80;
+		filter: alpha(opacity=80);
 	}
 	
-	#menu_top {
-		padding: 5px 0 0 150px;
-		margin: 0;
+	#livestream {
+		margin: 0 auto;
+		text-align: center;
+	}
+	
+	#map {
 		float: left;
-		background: #2eadb6;
-		width: 100%;
-	}
-
-#menu_top a {
-	text-align: center;
-	background: url("art/menu_egg2.png") 0 0 no-repeat;	
-	width: 50px;
-	margin-top: 10px;	
-	margin-right: 30px;
-	padding-top: 70px;
-	text-decoration: none;
-	color: #fff;
-	font-size: 1.15em;
-	font-family: arial, sans-serif;
-	font-variant: small-caps;
-	text-shadow: 1px 1px 1px #000;
-}
-
-#menu_top a:hover {
-	background: url("art/menu_egg2.png") -55px 0 no-repeat;
-	text-decoration: underline;
-	color: #fff715;
-	}
-
-	
-	#m_about:hover #aboutSub{
-		display: block;
-		background-color: #2eadb6;
-		position: absolute;
-		top: 280px;
-		margin-left: 60px;
-		padding: 10px;
-		box-shadow: 2px 2px 2px #000;
-		width: 5em;
-		border-radius: 0 0 25px 25px;
-	}
-	
-	#m_recipe:hover #recipeSub{
-		display: block;
-		background-color: #2eadb6;
-		position: absolute;
-		top: 210px;
-		margin-left: 220px;
-		padding: 10px;
-		box-shadow: 2px 2px 2px #000;
-		width: 6em;
-		border-radius: 0 0 25px 25px;		
-	}
-	
-		#m_news:hover #newsSub{
-		display: block;
-		background-color: #2eadb6;
-		position: absolute;
-		top: 280px;
-		margin-left: 290px;
-		padding: 10px;
-		box-shadow: 2px 2px 2px #000;
-		width: 5em;
-		border-radius: 0 0 25px 25px;		
-	}
+		text-align: center;
+	}	
 	
 	#m_about:hover #aboutSub li, #m_recipe:hover #recipeSub li, #m_news:hover #recipeSub li {
 		display: block;
@@ -811,161 +361,696 @@ video {
 
 	#m_about #aboutSub a:hover, #m_recipe #recipeSub a:hover, #m_news #newsSub a:hover{
 	text-decoration: underline;
-	color: #fff715;		
-	}
-
-	
-	#slider {
-		margin: 0 auto;
-		padding: 0;
-		width: 100%;
-		height: 60%;
+	color: #fff715;
 	}
 	
-}
- 
- 
-@media all and (max-width: 700px) {
-	body {
+	#menu_bottom {
+		font-family: arial, sans-serif;
 		font-size: .90em;
-		overflow-x: hidden;
-	}
-	
-	img, video {
-		width: 80%;
-		height: 60%;
-		margin: 0 auto;
-		padding: 0;
-	}
-	
-	article img {
-		width: 150px;
-		height: 100px;
+		text-align: center;
+		margin: 5px auto;
 	}
 
-	h1 a{
-		background: url("art/logo_egg_sm.jpg") 0 0 no-repeat;
-		height: 125px;
-		width: 250px;
-		float: none;
-		padding: 0;
-		margin: 0;
+	#menu_bottom a{
+		color: #fff;
+		text-decoration: none;
+		font-variant: small-caps;
+	}
+
+	#menu_bottom a:hover{
+		text-decoration: underline;
+		color: #fff715;
+	}
+
+	#menu_bottom li {
+		list-style-type: none;
+		display: inline;
+		margin-right: 1em;
+	}
+
+
+	#newsArticles, #hideNews {
+		display: none;
 	}
 	
-	h1 a:hover{
-	background: url("art/logo_egg_sm.jpg") -250px 0 no-repeat;
-	}
-	
-	h2 {
+	#par01, #par02, #par03, #par04 {
 		clear: both;
-		width: 100%;
-		box-shadow: none;
+		font-size: 0;
+		opacity: 0;
+		color: #fffadc;
+		margin-left: 0;
+		padding: 0;
+		width: 0;
+		transition: all 2s;
 	}
 	
-	h5 {
-		margin-left: 5%;
+	#par02 span {
+		background: url('art/chickenSprite.gif') 0 0;
+		position: absolute;
+		display: block;
+		width: 204px;
+		height: 107px;
+		left: 300px;
+		top: 150px;		
+		opacity: 0;
+		transition: all 8s;		
+	}
+	
+	#par01.show, #par02.show, #par03.show, #par04.show {
+		color: #000;
+		font-size: 1.5em;
+		position: relative;
+		left: 200px;
+		opacity: 1;
+		background: #fff;
+		box-shadow: 2px 2px 4px #000;
+		padding: 15px;
+		width: 80%;
+		margin-left:-100px;
+	}
+	
+	#par02.show span {
+
+		opacity: 1;
+	}	
+
+	#recipe01 {
 		width: 90%;
-	}
-	
-	header {
-		background: url('art/top_bg_sm.jpg') 0 0;
-		width: 100%;
-		height: 125px;
-		overflow: hidden;
-		max-width: 700px;
-		margin: 0;
+		padding: 15px;
+		margin: 0 auto;
+		box-shadow: 2px 2px 4px #000;
+		outline: 1px dashed #999;
 	}
 
+	.boxshadow #recipe01 {
+		border-right: 2px solid #999;
+		border-bottom: 2px solid #999;
+	}
+
+		#recipe01 p, #recipe01 li {
+			color: #163796;
+			font-family: 'Tekton Pro', sans-serif;
+			font-size: 1em;
+		}
+		
+		#recipe01 strong {
+			font-variant: small-caps;
+			font-size: 16pt;
+			text-decoration: underline;
+		}
+
+		#recipe01 video {
+			display: block;
+			margin: 10px auto;
+			text-align: center;
+			width: 85%;
+		}
+
+	#slider {
+		margin: 30px auto;
+		text-align: center;
+		width: 586px;
+		height: 440px;
+		box-shadow: 3px 3px 5px #888888;
+	}
+
+	#sliderButtons {
+		
+		margin: -30px auto 0 auto;
+	}
+
+	#sliderButtons a {
+		font-family: Arial, sans-serif;
+		font-size: 21pt;
+		color: #fdf614;
+		text-decoration: none;
+		text-shadow: 1px 1px 2px #000;	
+	}
+
+	#sliderButtons a:hover {
+		color: #999;
+		text-shadow: 2px 2px 2px #000;		
+	}
+	/*
+	#slogan {
+		position: absolute;
+		top: 50px;
+		left: 500px;
+		font-family: 'Architects Daughter', shaunSheep, cursive;
+		font-variant: small-caps;
+		font-size: 1.5em;
+		color: #fff;
+		display: none;
+	}*/
+
+	#stamp {
+		font-family: arial, sans-serif;
+		font-size: .75em;
+		font-variant: small-caps;
+		text-align: center;
+		margin: 0 auto;	
+	}
+	
+	/*-------CLASSES-------*/
+.center {
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.clearBoth{
+		clear: both;
+	}
+
+	.dot{
+		border-radius: 50%;
+		padding: 5px;
+		background-color: #fdf614;
+		font-size: 0;
+		box-shadow: 0px 0px 5px #999;
+		margin: 0 5px;
+	}
+
+	 .dotGray {
+		background-color: #999;	
+		box-shadow: 1px 1px 8px #000; 
+	 }
+	 
+	.dropCap {
+		font-family: 'Times New Roman', serif;
+		font-size: 3em;
+		padding-right: 2px;
+		margin-top: -15px;
+		float: left;
+	}
+
+
+	.goLeft {
+		margin-right: 25%;
+		padding-bottom: 30px;
+	}
+
+	.goRight {
+
+		margin-left: 25%;
+		padding-bottom: 30px;
+	}
+
+	.indent {
+		margin-left: 20px;
+	}
+ 	 .small10 {
+		 font-size: .75em;
+	 }
+	 
+	.newsImg {
+		float: left;
+		box-shadow: 2px 2px 5px #000;
+		margin: 10px 10px 10px 0;
+	}
+	
+	 .right {
+		 text-align: right;
+	 }
+	 
+	 .skewNote {
+		 transform:skew(10deg,10deg);
+	 }
+	 
+	 .width60 {
+		 width: 60%;
+	 }
+ /* -------------- MEDIA SPECIFIC -------------- */
+	
+	/*-------DESKTOP-------*/
+	
+	/*---ELEMENTS---*/
+	
+
+	h1 a {
+		background: url("art/logo_egg.jpg") 0 0 no-repeat;
+		width: 395px;
+		height: 200px;
+	}
+
+	h1 a:hover{
+		background: url("art/logo_egg.jpg") -400px 0 no-repeat;
+	}
+
+	h2 {
+		font-size: 2.25em;
+		margin-bottom: 20px;
+		padding: 5px 20px;
+	}
+
+	h4{
+		font-size: 1.60em;
+		margin: 20px auto 20px auto;
+		padding: 5px 10px;
+	}
+
+	h5 {
+		font-size: 1.25em;
+		margin-top: 30px;
+		margin-bottom: 10px;
+		margin-left: 100px;
+		padding: 5px;
+	}
+	
+
+	blockquote {
+		padding-top: 20px;
+		padding-left: 50px;
+		margin-bottom: 20px;
+	}
+	
 	fieldset {
 		margin-bottom: 15px;
-		width: 90%;
+		width: 60%;
 	}
 
-	nav {
-		clear: both;		
-		height: 50px;
-		width: 100%;
-		box-shadow: 3px 3px 5px #000;
-		text-align: center;
-		margin: 0;
-		overflow: hidden;
+	footer {
+		padding-top: 5px;
+		margin-top: 20px;
+		min-height: 150px;
+	}
+
+	form p {
+		margin-bottom: 5px;
+	}
+
+	header {
+		background: url("art/top_bg.jpg") 0 0;
 	}
 	
+	nav {
+		top: 80px;
+		left: 30%;
+	}
+
+	p input {
+		margin-bottom: 5px;
+	}
+
+	/*---CLASSES---*/
+
+	/*---IDS---*/
 	#contactForm {
-		width: 90%;
+		width: 60%;
 		padding: 15px;
 	}
 
-	
+	#f_spamInfo {
+		font-size: .90em;
+		float: right;
+		width: 220px;
+		padding: 10px;
+		margin-top: -100px;
+	}
+
+	#hideNews, #showNews{
+		font-size: .75em;
+		margin: 0 5px;
+	}
+
 	#home #m_home a, #about #m_about a, #news #m_news a, #recipes #m_recipe a, #contactUs #m_contact a {
-		background: none;
+		background-image: url("art/menu_egg.png") -130px 0 no-repeat;
 	}
-	
+
+	#mainContent {
+		font-family: Arial, sans-serif;
+		background-color: #fffadc;
+		margin: 0 auto;
+		min-height: 400px;
+	}
+
+	#mainContent p {
+		width: 80%;
+		margin: 0 auto;
+	}
+
 	#menu_top {
-		float: none;
-		padding-top: 1em;
-		padding-left: 5px;
-		margin: 0;
-		width: 100%;
+		padding-left: 5em;
+		float: left;
 	}
-	
-	#m_contact {
-		display: none;
+
+	#menu_top li{
+		list-style: none;
+		display: inline;
 	}
-	
+
+		#aboutSub, #recipeSub, #newsSub, #aboutSub ul, #recipeSub ul, #newsSub ul{
+			display: none;
+		}
+		
 	#menu_top a {
-		float: none;
-		background: none;	
+		text-align: center;
+		background: url("art/menu_egg.png") 0 0 no-repeat;	
+		width: 70px;
+		float: left;
+		margin-top: 30px;	
+		margin-right: 10px;
+		padding-top: 100px;
+		text-decoration: none;
+		color: #fff;
 		font-size: 1.15em;
-		padding-bottom: 10px;
+		font-family: arial, sans-serif;
+		font-variant: small-caps;
+		text-shadow: 1px 1px 1px #000;
 	}
 
 	#menu_top a:hover {
-	background: none;
-	}
-	
-	#aboutSub li, #recipeSub li, #newsSub li{
-		margin-bottom: 10px;
-	}
-	
-	#m_about:hover #aboutSub{
-		display: none;
-	}
-	
-	#m_recipe:hover #recipeSub{
-		display: none;		
-	}
+		background: url("art/menu_egg.png") -130px 0 no-repeat;
+		text-decoration: underline;
+		color: #fff715;
+		}
+
+		#aboutSub, #newsSub {
+		background-color: #007d06;
+		position: absolute;
+		padding: 10px;
+		box-shadow: 2px 2px 2px #000;
+		width: 5em;
+		border-radius: 0 0 25px 25px;		
+	}	
+		
+		#m_about:hover #aboutSub{
+			display: block;
+			top: 170px;
+			margin-left: 70px;
+		}
 	
 		#m_news:hover #newsSub{
-		display: none;		
-	}
-	
-	#m_about #aboutSub a, #m_recipe #recipeSub a, #m_news #newsSub a{
-		background-image: none;
-		padding: 0px;
-		border-top: none;
-	}
-	
-	#slider {
-		margin: 0 auto;
-		padding: 0;
-		width: 100%;
-		height: 60%;
-	}
-	
-}
+			display: block;
+			top: 150px;
+			margin-left: 310px;
+		}
+		
 
-body:-webkit-full-screen {
-	background-color: #060c0f url(../art/body_bg.jpg) 0 0;
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	margin: 0;
-	box-sizing: border-box;
-	object-fit:contain;
-}
+		
+	/*-------TABLET-------*/
+	 
+	 @media all and (max-width: 950px) {
+	
+
+	h2 {
+		font-size: 2.25em;
+		margin-bottom: 20px;
+		padding: 5px 20px;
+	}
+
+	h4{
+		font-size: 1.60em;
+		margin: 20px auto 20px auto;
+		padding: 5px 10px;
+	}
+
+	h5 {
+		font-size: 1.25em;
+		margin-top: 30px;
+		margin-bottom: 10px;
+		margin-left: 100px;
+		padding: 5px;
+	}
+	
+
+	blockquote {
+		padding-top: 20px;
+		padding-left: 50px;
+		margin-bottom: 20px;
+	}
+	
+	fieldset {
+		margin-bottom: 15px;
+		width: 60%;
+	}
+
+	footer {
+		padding-top: 5px;
+		margin-top: 20px;
+		min-height: 150px;
+	}
+
+	form p {
+		margin-bottom: 5px;
+	}
+
+	header {
+		background: url("art/top_bg.jpg") 0 0;
+	}
+	
+	nav {
+		top: 55px;
+		left: 28%;
+	}
+
+	p input {
+		margin-bottom: 5px;
+	}
+
+	video {
+		width: 75%;
+		height: 75%;
+	}
+	/*---CLASSES---*/
+
+	/*---IDS---*/
+	#contactForm {
+		width: 60%;
+		padding: 15px;
+	}
+
+	#f_spamInfo {
+		font-size: .90em;
+		float: right;
+		width: 220px;
+		padding: 10px;
+		margin-top: -100px;
+	}
+
+	#hideNews, #showNews{
+		font-size: .75em;
+		margin: 0 5px;
+	}
+
+	#home #m_home a, #about #m_about a, #news #m_news a, #recipes #m_recipe a, #contactUs #m_contact a {
+		background: url("art/menu_egg2.png") -55px 0 no-repeat;
+	}
+
+	#mainContent {
+		font-family: Arial, sans-serif;
+		background-color: #fffadc;
+		margin: 0 auto;
+		min-height: 400px;
+	}
+
+	#mainContent p {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	#menu_top {
+		margin-left: 5em;
+		float: left;
+	}
+
+	#menu_top li{
+		list-style: none;
+		display: inline;	
+	}
+
+		#aboutSub, #recipeSub, #newsSub, #aboutSub ul, #recipeSub ul, #newsSub ul{
+			display: none;	
+		}
+		
+	#menu_top a {
+		text-align: center;
+		background: url("art/menu_egg2.png") 0 0 no-repeat;	
+		width: 50px;
+		float: left;
+		margin-top: 30px;	
+		margin-right: 30px;
+		padding-top: 70px;
+		text-decoration: none;
+		color: #fff;
+		font-size: 1.15em;
+		font-family: arial, sans-serif;
+		font-variant: small-caps;
+		text-shadow: 1px 1px 1px #000;
+	}
+
+	#menu_top a:hover {
+		background: url("art/menu_egg2.png") -55px 0 no-repeat;
+		}
+
+		#aboutSub, #newsSub {
+		background-color: #007d06;
+		position: absolute;
+		box-shadow: 2px 2px 2px #000;
+		width: 4em;
+		border-radius: 0 0 25px 25px;		
+	}	
+		
+		#m_about:hover #aboutSub{
+			display: block;
+			top: 170px;
+			margin-left: 65px;
+		}
+	
+		#m_news:hover #newsSub{
+			display: block;
+			top: 150px;
+			margin-left: 300px;
+		}
+	 
+	/*-------CELL PHONE-------*/ 
+	@media all and (max-width: 700px) {
+
+	/*---ELEMENTS---*/	
+		article img {
+			width: 150px;
+			height: 100px;
+		}
+
+		h1 a{
+			background: url("art/logo_egg_sm.jpg") 0 0 no-repeat;
+			height: 125px;
+			width: 245px;
+			float: none;
+			padding: 0;
+			margin: 0;
+		}
+		
+		h1 a:hover{
+		background: url("art/logo_egg_sm.jpg") -250px 0 no-repeat;
+		}
+		
+		h2 {
+			clear: both;
+			width: 100%;
+			box-shadow: none;
+			margin: 0;
+			padding-left: 30px;
+			font-size: 1.5em;
+		}
+		
+		h4 {
+			font-size: 1.25em;	
+		}
+		
+		h5 {
+			margin-left: 5%;
+			width: 90%;
+		}
+		
+		header {
+			background: url('art/top_bg_sm.jpg') 0 0;
+			width: 100%;
+			height: 125px;
+			margin: 0;
+		}
+
+		fieldset {
+			margin-bottom: 15px;
+			width: 90%;
+		}
+		
+		main {
+			clear: both;
+			margin: 0 auto;
+			width: 100%;
+		}
+
+		nav {
+			background: #2eadb6;
+			padding: 0;
+			position: relative;
+			clear: both;		
+			height: 50px;
+			width: 100%;
+			box-shadow: 3px 3px 5px #000;
+			text-align: center;
+			margin: 0;
+			top: 0;
+			left: 0;
+			
+		}
+	
+	/*---IDS---*/		
+	
+		#contactForm {
+			width: 90%;
+			padding: 15px;
+		}
+
+		
+		#home #m_home a, #about #m_about a, #news #m_news a, #recipes #m_recipe a, #contactUs #m_contact a {
+			background: none;
+		}
+		
+		
+		#menu_bottom:last-child {
+			display: none;
+		}
+		
+		#menu_top {
+			float: none;
+			padding-top: 1em;
+			padding-left: 5px;
+			margin: 0;
+			width: 100%;
+		}
+		
+		
+		#m_contact {
+			display: none;
+		}
+		
+		#menu_top a {
+			float: none;
+			background: none;	
+			font-size: 1.15em;
+			padding-bottom: 10px;
+		}
+
+		#menu_top a:hover {
+			background: none;
+		}
+		
+		#aboutSub li, #recipeSub li, #newsSub li{
+			margin-bottom: 10px;
+		}
+		
+		#m_about:hover #aboutSub{
+			display: none;
+		}
+		
+		#m_recipe:hover #recipeSub{
+			display: none;		
+		}
+		
+			#m_news:hover #newsSub{
+			display: none;		
+		}
+		
+		#m_about #aboutSub a, #m_recipe #recipeSub a, #m_news #newsSub a{
+			background-image: none;
+			padding: 0px;
+			border-top: none;
+		}
+		
+		#slider {
+			margin: 0 auto;
+			padding: 0;
+			width: 90%;
+			height: 90%;
+		}
+		
+		#slider img{
+			margin: 0 auto;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+		}
+		
+	}
  

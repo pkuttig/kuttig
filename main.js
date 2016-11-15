@@ -1,4 +1,5 @@
 var slideIndex = 0;
+var prev = 0;
 
 showDivs(slideIndex);
 
@@ -88,4 +89,69 @@ function expand(a) {
 	var x=document.getElementById(a);
 	x.style.height="100%";
 	x.style.width="100%";
+}
+
+function change(a,b) {
+
+	if(prev != 0 || a == "#") {
+		var x = document.getElementById('par0'+prev);
+		var y = document.getElementById('fact0'+prev);
+		x.className="";
+		y.className="";
+		var ctxPrev = y.getContext("2d");
+		ctxPrev.clearRect(0, 0, y.width, y.height);
+		if(b==prev) {
+			prev = 0;
+			return true;			
+		}
+	}
+
+	var e = document.getElementById('fact0'+b);
+	var par = document.getElementById('par0'+b);
+	var ctx = e.getContext("2d");
+	var imgObj = new Image();
+	
+	if(a=='oval') {
+		e.className="oval";
+		par.className="show";
+		prev = b;
+		ctx.font = "14pt Arial";
+		ctx.fillText("Eat eggs!",100, 80);
+	}if(a=='rectangle') {
+		var grd = ctx.createLinearGradient(0,0,300,0);
+			grd.addColorStop(0,"#0bad13");
+			grd.addColorStop(1,"#fffadc");
+		e.className='rectangle';
+		par.className="show";		
+		prev = b;
+		ctx.fillStyle = grd;
+		ctx.fillRect(0,0,800,300);
+	}if(a=='square') {
+		e.className='square';
+		par.className="show";
+		prev = b;
+		imgObj.src = "art/eggDrawing.png";		
+		imgObj.onload = function() {
+			ctx.drawImage(imgObj, 30, -30);
+		};
+	}if(a=='tilted') {
+		e.className='tilted';
+		par.className="show";		
+		prev = b;
+		ctx.setLineDash([5, 15]);
+		ctx.beginPath(); 
+		ctx.lineWidth="2";
+		ctx.strokeStyle="#a0a0a0";
+		ctx.moveTo(0,75);
+		ctx.lineTo(300,75);
+		ctx.stroke();
+
+		ctx.setLineDash([2, 15]);
+		ctx.beginPath(); 
+		ctx.lineWidth="2";
+		ctx.strokeStyle="#4d4d4d";
+		ctx.moveTo(150,0);
+		ctx.lineTo(150,200);
+		ctx.stroke();		
+	}
 }
