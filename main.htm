@@ -20,7 +20,7 @@ Copyright  2016
 </head>
 
 
-<body id="home" onload="carousel()">
+<body id="home" onload="slideShow()">
 <header>
 <h1><a href="main.htm">Sunny Eggs Co</a></h1>
 </header>
@@ -54,20 +54,18 @@ Copyright  2016
 		<blockquote><span class="dropCap">W</span>elcome to Sunny Eggs Company where our chickens derive the best that fresh air, sunshine, green grass, and high quality, non-GMO food can provide, which in turn provides you with the best eggs they can provide. - Professor Yolk</blockquote>
 	</div><!--END PAGE INTRO-->
 
-		<div id="slider">
-		  <img class="mySlides" src="art/slideshow/01.jpg" alt="Happy Eggs Slideshow" />
-		  <img class="mySlides" src="art/slideshow/02.jpg" alt="Happy Eggs Slideshow" />
-		  <img class="mySlides" src="art/slideshow/03.jpg" alt="Happy Eggs Slideshow" />
-			<div id="sliderButtons">
-			<a class="goLeft" onclick="advanceSlide(-1)" href="#goTo">&#10094;</a>
-			<a class="goRight" onclick="advanceSlide(1)" href="#goTo">&#10095;</a>
-			</div>
-			<div id="goTo">
-				<a class="dot" onclick="currentSlide(1)" href="#goTo"></a>
-				<a class="dot" onclick="currentSlide(2)" href="#goTo"></a>
-				<a class="dot" onclick="currentSlide(3)" href="#goTo"></a>
-			</div>
+<div id="slideshow">
+	<canvas id="slideCanvas" width="586" height="440">
+		<div id="slideCanvas">
 		</div><!--END SLIDER-->
+	</canvas>
+
+	<div id="goTo">
+		<a id="dot0" class="dot" onclick="switchImage(0)" href="#mainContent"></a>
+		<a id="dot1" class="dot" onclick="switchImage(1)" href="#mainContent"></a>
+		<a id="dot2" class="dot" onclick="switchImage(2)" href="#mainContent"></a>
+	</div>
+</div>	
 </main><!--END MAIN DIV-->
 <footer>
 	<h2 hidden>Footer</h2>

@@ -158,7 +158,17 @@
 		margin: 0 auto;
 		box-shadow: 1px 1px 2px #999;
 	}
+
+	#container {
+		display: none;
+		transition: all 2s;
+	}
 	
+	#container ul li {
+		list-style-position: inside;
+	}
+	
+
 	#facts canvas:hover {
 		cursor: pointer;
 	}
@@ -411,7 +421,7 @@
 		width: 204px;
 		height: 107px;
 		left: 300px;
-		top: 150px;		
+		top: 110px;		
 		opacity: 0;
 		transition: all 8s;		
 	}
@@ -465,14 +475,21 @@
 			text-align: center;
 			width: 85%;
 		}
-
-	#slider {
-		margin: 30px auto;
+		#slideshow {
+			margin: 0 auto;
+			text-align: center;
+		}
+	
+		#slideCanvas {
 		text-align: center;
-		width: 586px;
-		height: 440px;
+		margin: 0;
 		box-shadow: 3px 3px 5px #888888;
-	}
+		}
+		
+		#slideImgs {
+			width: 586px;
+			height: 440px;
+		}
 
 	#sliderButtons {
 		
@@ -512,7 +529,7 @@
 	}
 	
 	/*-------CLASSES-------*/
-.center {
+	.center {
 		text-align: center;
 		margin: 0 auto;
 	}
@@ -532,7 +549,12 @@
 
 	 .dotGray {
 		background-color: #999;	
-		box-shadow: 1px 1px 8px #000; 
+		box-shadow: 1px 1px 8px #000;
+		margin: 0 5px;
+		border-radius: 50%;
+		padding: 5px;
+		margin: 0 5px;
+		font-size: 0;		
 	 }
 	 
 	.dropCap {
@@ -604,7 +626,7 @@
 
 	h4{
 		font-size: 1.60em;
-		margin: 20px auto 20px auto;
+		margin: 50px auto 20px auto;
 		padding: 5px 10px;
 	}
 
@@ -618,9 +640,10 @@
 	
 
 	blockquote {
-		padding-top: 20px;
-		padding-left: 50px;
+		padding: 20px 0 0 0;
 		margin-bottom: 20px;
+		margin-left: 80px;
+		padding-left: 50px;
 	}
 	
 	fieldset {
@@ -659,6 +682,15 @@
 		padding: 15px;
 	}
 
+	#container p {
+		padding-top: 15px;
+	}
+	
+	#container li {
+		margin-left: 50px;
+		margin-bottom: 5px;
+	}
+	
 	#f_spamInfo {
 		font-size: .90em;
 		float: right;
@@ -745,8 +777,7 @@
 			margin-left: 310px;
 		}
 		
-
-		
+	
 	/*-------TABLET-------*/
 	 
 	 @media all and (max-width: 950px) {
