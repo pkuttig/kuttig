@@ -21,7 +21,7 @@ Copyright  2016
 </head>
 
 
-<body id="news">
+<body id="news" onload="startWorker()">
 <header>
 <h1><a href="main.htm">Sunny Eggs Co</a></h1>
 </header>
@@ -53,7 +53,30 @@ Copyright  2016
 	<h3 hidden>Main Page Content</h3>
 	<div id="pageIntro">
 		<h4 hidden>Page Introduction Quote</h4>
-			<p class="quote">This page features eggs in the news and witty blog posts from Professor Yolk. You may learn more about eggs than you wanted to know.</p>
+		<!--WORKER SCRIPT-->
+		<script>
+			var w;
+
+			function startWorker() {
+				if(typeof(Worker) !== "undefined") {
+					if(typeof(w) == "undefined") {
+						w = new Worker("worker.js");
+					}
+					w.onmessage = function(event) {
+						document.getElementById("result").innerHTML = event.data;
+					};
+				} else {
+					document.getElementById("result").innerHTML = "MANY, MANY";
+				}
+			}
+
+			function stopWorker() {
+				w.terminate();
+				w = undefined;
+			}
+		</script><!--END WORKER SCRIPT-->
+
+			<blockquote><span class="dropCap">T</span>his page features eggs in the news and witty blog posts from Professor Yolk. You may learn more about eggs than you wanted to know. For instance, did you know that our chickens have laid <strong><output id="result"></output></strong> eggs!! - Professor Yolk</blockquote>
 		</div><!--END PAGE INTRO-->
 
 	<h4>News Articles <a id="hideNews" href="#news" onclick="hide('newsArticles'); hide('hideNews'); show('showNews');" title="Show News">&#45;</a><a id="showNews" href="#news" onclick="show('hideNews'); show('newsArticles'); hide('showNews')" title="Show News">&#43;</a></h4>	
@@ -77,10 +100,10 @@ Copyright  2016
 			Sed mollis suscipit dapibus. Vestibulum in urna tincidunt, molestie elit quis, mollis arcu. Aenean sed condimentum mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur ut dui vel dolor convallis fringilla. Mauris et fringilla nunc. Sed ultrices consequat gravida.</p>
 		</article><!--END ARTICLE 2-->	
 	</div><!--END NEWS ARTICLES-->
-<div id="follow">	
-	<div id="liveStream">
+<div id="liveStream">
+	<div id="follow">
 	<h4>Livestream</h4>
-		<p class="quote">Want to see how your egg laying friends spend their days? Like to watch chickens walk around and eat healthy bugs, grass, and seeds? Well then you've come to the right place. - Professor Yolk</p>
+		<blockquote>Want to see how your egg laying friends spend their days? Like to watch chickens walk around and eat healthy bugs, grass, and seeds? Well then you've come to the right place. - Professor Yolk</blockquote>
 		<video controls preload="auto" width="800" height="600" autoplay loop muted>
 			<source src="video/Chickens01.mp4" type="video/mp4" />
 			<source src="video/Chickens01.ogv" type="video/ogv" />

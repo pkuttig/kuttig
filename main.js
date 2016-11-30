@@ -1,10 +1,26 @@
 
 //CANVAS SLIDESHOW - ONLY USED WITH BROWSERS THAT SUPPORT CANVAS
-		var imagePaths = ["art/slideshow/01.jpg", "art/slideshow/02.jpg", "art/slideshow/03.jpg"];
-		var showCanvas = null;
-		var ctx = null;
-		var img = document.createElement("img");
-		var currentImg = 0;
+	//SETUP CANVAS AND IMAGE VARIABLES
+	var imagePaths = ["0", "1", "2", "3"];
+	var showCanvas = null;
+	var ctx = null;
+	var img = document.createElement("img");
+	var currentImg = 0;
+   
+    // CREATE CONNECTION VARIABLE
+    var connection = navigator.connection || { 'type': '0' };
+    
+    // CHANGE IMAGE PATHS BASED ON CONNECTION
+	switch(connection.type) {
+		case connection.CELL_3G:
+			//SLOW SPEEDS
+			imagePaths = ["art/slideshow/low_01.jpg", "art/slideshow/low_02.jpg", "art/slideshow/low_03.jpg", "art/slideshow/low_04.jpg"];
+			break;
+		default:
+			// WIFI, ETHERNET, UNKNOWN
+			imagePaths = ["art/slideshow/high_01.jpg", "art/slideshow/high_02.jpg", "art/slideshow/high_03.jpg", "art/slideshow/high_04.jpg"];
+	}
+
 
 	function slideShow() {
 		showCanvas = document.getElementById('slideCanvas');
@@ -14,7 +30,7 @@
 		img.setAttribute('id','slideImgs');
 		switchImage();
 		
-		setInterval(switchImage, 3000);
+		setInterval(switchImage, 5000);
 	}
 	
 	function switchImage(a) {
@@ -29,14 +45,22 @@
 		document.getElementById("dot0").className = "dotGray";
 		document.getElementById("dot1").className = "dot";
 		document.getElementById("dot2").className = "dot";
+		document.getElementById("dot3").className = "dot";		
 		}else if(currentImg==1) {
 		document.getElementById("dot0").className = "dot";
 		document.getElementById("dot1").className = "dotGray";
-		document.getElementById("dot2").className = "dot";				
+		document.getElementById("dot2").className = "dot";
+		document.getElementById("dot3").className = "dot";		
 		}else if(currentImg==2) {
 		document.getElementById("dot0").className = "dot";
 		document.getElementById("dot1").className = "dot";
-		document.getElementById("dot2").className = "dotGray";				
+		document.getElementById("dot2").className = "dotGray";
+		document.getElementById("dot3").className = "dot";		
+		}else if(currentImg==3) {
+		document.getElementById("dot0").className = "dot";
+		document.getElementById("dot1").className = "dot";
+		document.getElementById("dot2").className = "dot";		
+		document.getElementById("dot3").className = "dotGray";				
 		}
 		if(currentImg == imagePaths.length-1) {
 			currentImg = 0;
@@ -181,6 +205,5 @@ var rectX = 0;
 			rectX = 0;
 		}
 	}
-
 
 

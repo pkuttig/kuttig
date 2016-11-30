@@ -62,7 +62,7 @@ Copyright  2016
 <main id="mainContent">
 	<h3 hidden>Main Page Content</h3>
 	<div id="pageIntro">
-		<p class="quote">This page is about who we are and what we do. Yeah, we raise chickens that produce eggs, which you eat and enjoy ... but just how does the egg end up in the store carton. You know, it's not born there. It's born here. In sunshine, grass, and fresh air, on a diet of goodness and happiness! - Professor Yolk</p>
+		<blockquote><span class="dropCap">T</span>his page is about who we are and what we do. Yeah, we raise chickens that produce eggs, which you eat and enjoy ... but just how does the egg end up in the store carton. You know, it's not born there. It's born here. In sunshine, grass, and fresh air, on a diet of goodness and happiness! - Professor Yolk</blockquote>
 	</div><!--END PAGE INTRO-->
 	<article>
 	<h4>About Sunny Egg Farms</h4>
@@ -95,7 +95,7 @@ Copyright  2016
 		}
 
 		function success(position) {
-		  
+
 		  var url = "http://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude + "," + position.coords.longitude + "&sensor=true";
 		  
 		  geodata = position.coords;
@@ -131,7 +131,7 @@ Copyright  2016
 				mi = (Math.floor((d*0.621371) * 100)/100);
 			$(this)
 			  .attr("data-distance", d)
-			  .append(" <span>" + mi + " miles away from you as the crow flies.</span>");
+			  .append(" <span><strong>" + mi + "</strong> miles away from you as the crow flies.</span>");
 		  });
 		}
 
@@ -182,14 +182,14 @@ Copyright  2016
 </section>	
 	<div id="facts">
 	<h4>Egg Facts</h4>
-	<blockquote><p>Click on the eggs below to see some egg-cellent facts! - Professor Yolk</p></blockquote>
-		<p id="par01">Did you know that eggs are a great source of protein? Most adults need 46-56g of protein a day. Just one of our eggs contains 6g of protein! <a class="small10" href="#par02" onclick="change('#', '1')">Hide this</a></p>
-		<p id="par02">Did you know that our chickens eat green grass, bugs, and seeds in a controlled area that is free from pesticides? We also feed them organic food and vegetables from our farms. <a class="small10" href="#par02" onclick="change('#', '2')">Hide this</a><span></span></p>
-		<p id="par03">Post-It Note for Moms. Did you know that eating an egg each morning while pregnant not only provides you and your baby with needed nutrition, but helps with the sickness? <a class="small10" href="#par02" onclick="change('#', '3')">Hide this</a></p>
-		<p id="par04">Put your eggs on their sides the night before hard boiling them in order to center the yolks. <a class="small10" href="#par02" onclick="change('#', '4')">Hide this</a></p>		
+	<blockquote><p>Click on the eggs below to see some egg-cellent facts! - Professor Yolk</p></blockquote>		
+		<p id="par01">Did you know that eggs are a great source of protein? Most adults need 46-56g of protein a day. Just one of our eggs contains 6g of protein! <a class="small10" href="#par02" onclick="change('#', '1')">Hide this</a></p>		
 		<canvas id="fact01" onclick="change('oval', '1')"></canvas>
+		<p id="par02">Did you know that our chickens eat green grass, bugs, and seeds in a controlled area that is free from pesticides? We also feed them organic food and vegetables from our farms. <a class="small10" href="#par02" onclick="change('#', '2')">Hide this</a><span></span></p>		
 		<canvas id="fact02" onclick="change('rectangle', '2')"></canvas>
+		<p id="par03">Post-It Note for Moms. Did you know that eating an egg each morning while pregnant not only provides you and your baby with needed nutrition, but helps with the sickness? <a class="small10" href="#par02" onclick="change('#', '3')">Hide this</a></p>		
 		<canvas id="fact03" onclick="change('square', '3')"></canvas>
+		<p id="par04">Put your eggs on their sides the night before hard boiling them in order to center the yolks. <a class="small10" href="#par02" onclick="change('#', '4')">Hide this</a></p>		
 		<canvas id="fact04" onclick="change('tilted', '4')"></canvas>
 	</div>
 	<div class="clearBoth"></div>

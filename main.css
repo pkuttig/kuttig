@@ -82,10 +82,13 @@
 	}
 	
 	blockquote {
-		background: url("art/quote.png") 0 0 no-repeat;
 		font-style: italic;
 		color: #777;
-		width: 80%;
+		padding-right: 10%;
+		padding-left: 10%;
+		padding-bottom: 2%;
+		margin: 0 auto;
+		clear: both;
 	}
 	
 	button {
@@ -154,6 +157,10 @@
 	
 	
 	/*-------IDS-------*/
+	#about #m_about #aboutSub a, #news #m_news #newsSub a{
+		background: none;
+	}	
+	
 	#contactForm {
 		margin: 0 auto;
 		box-shadow: 1px 1px 2px #999;
@@ -235,7 +242,8 @@
 			border: none;
 			border-radius: 0;
 			padding: 0px;
-			box-shadow: 2px 2px 4px #000;		
+			box-shadow: 2px 2px 4px #000;
+			margin: 4%;
 	}
 
 
@@ -312,6 +320,11 @@
 		clear: both;
 	}
 	
+	#fact01.fade, #fact02.fade, #fact03.fade, #fact04.fade {
+		opacity: 0;
+		display: none;
+	}
+	
 	#f_spamInfo {
 		display: none;
 		background-color: #fff;
@@ -360,14 +373,16 @@
 		display: block;
 	}
 
-	#m_about #aboutSub a, #m_recipe #recipeSub a, #m_news #newsSub a{
-		background-image: none;
+	#m_about #aboutSub a, #m_news #newsSub a{
+		background: none;
 		padding: 5px;
 		margin: 0;
 		border-top: 1px solid #097a0e;
 		text-decoration: none;
 		color: #fff;
 	}
+	
+	
 
 	#m_about #aboutSub a:hover, #m_recipe #recipeSub a:hover, #m_news #newsSub a:hover{
 	text-decoration: underline;
@@ -403,6 +418,7 @@
 		display: none;
 	}
 	
+	
 	#par01, #par02, #par03, #par04 {
 		clear: both;
 		font-size: 0;
@@ -412,6 +428,7 @@
 		padding: 0;
 		width: 0;
 		transition: all 2s;
+		display: inline;
 	}
 	
 	#par02 span {
@@ -420,8 +437,8 @@
 		display: block;
 		width: 204px;
 		height: 107px;
-		left: 300px;
-		top: 110px;		
+		left: 50%;
+		top: 50%;		
 		opacity: 0;
 		transition: all 8s;		
 	}
@@ -429,18 +446,16 @@
 	#par01.show, #par02.show, #par03.show, #par04.show {
 		color: #000;
 		font-size: 1.5em;
-		position: relative;
-		left: 200px;
 		opacity: 1;
 		background: #fff;
 		box-shadow: 2px 2px 4px #000;
 		padding: 15px;
 		width: 80%;
-		margin-left:-100px;
+		display: block;
 	}
 	
+	
 	#par02.show span {
-
 		opacity: 1;
 	}	
 
@@ -491,12 +506,12 @@
 			height: 440px;
 		}
 
-	#sliderButtons {
+	#slideCanvasButtons {
 		
 		margin: -30px auto 0 auto;
 	}
 
-	#sliderButtons a {
+	#slideCanvasButtons a {
 		font-family: Arial, sans-serif;
 		font-size: 21pt;
 		color: #fdf614;
@@ -504,7 +519,7 @@
 		text-shadow: 1px 1px 2px #000;	
 	}
 
-	#sliderButtons a:hover {
+	#slideCanvasButtons a:hover {
 		color: #999;
 		text-shadow: 2px 2px 2px #000;		
 	}
@@ -638,14 +653,10 @@
 		padding: 5px;
 	}
 	
-
 	blockquote {
-		padding: 20px 0 0 0;
-		margin-bottom: 20px;
-		margin-left: 80px;
-		padding-left: 50px;
+		background: url("art/quote.png") 5% 0 no-repeat;		
 	}
-	
+
 	fieldset {
 		margin-bottom: 15px;
 		width: 60%;
@@ -704,8 +715,8 @@
 		margin: 0 5px;
 	}
 
-	#home #m_home a, #about #m_about a, #news #m_news a, #recipes #m_recipe a, #contactUs #m_contact a {
-		background-image: url("art/menu_egg.png") -130px 0 no-repeat;
+	#home #m_home a, #about #m_about a, #news #m_news a, #recipes #m_recipe a, #contactUs #m_contact a{
+		background: url("art/menu_egg.png") -130px 0 no-repeat;
 	}
 
 	#mainContent {
@@ -748,6 +759,7 @@
 		font-family: arial, sans-serif;
 		font-variant: small-caps;
 		text-shadow: 1px 1px 1px #000;
+		display: inline;
 	}
 
 	#menu_top a:hover {
@@ -802,13 +814,10 @@
 		margin-left: 100px;
 		padding: 5px;
 	}
-	
 
 	blockquote {
-		padding-top: 20px;
-		padding-left: 50px;
-		margin-bottom: 20px;
-	}
+		background: url("art/quote.png") 0 0 no-repeat;		
+	}	
 	
 	fieldset {
 		margin-bottom: 15px;
@@ -867,6 +876,7 @@
 		background: url("art/menu_egg2.png") -55px 0 no-repeat;
 	}
 
+
 	#mainContent {
 		font-family: Arial, sans-serif;
 		background-color: #fffadc;
@@ -914,7 +924,7 @@
 		}
 
 		#aboutSub, #newsSub {
-		background-color: #007d06;
+		background: #007d06;
 		position: absolute;
 		box-shadow: 2px 2px 2px #000;
 		width: 4em;
@@ -933,8 +943,8 @@
 			margin-left: 300px;
 		}
 	 
-	/*-------CELL PHONE-------*/ 
-	@media all and (max-width: 700px) {
+	/*-------CELL PHONE - WIDE-------*/ 
+	@media all and (max-width: 750px) {
 
 	/*---ELEMENTS---*/	
 		article img {
@@ -972,6 +982,10 @@
 			margin-left: 5%;
 			width: 90%;
 		}
+
+		blockquote {
+		background: url("art/quote_sm.png") 2% 0 no-repeat;		
+		}			
 		
 		header {
 			background: url('art/top_bg_sm.jpg') 0 0;
@@ -1012,14 +1026,18 @@
 			width: 90%;
 			padding: 15px;
 		}
-
+		
+		#fact02.rectangle {
+			width: 90%;
+			height: 10%;
+		}		
 		
 		#home #m_home a, #about #m_about a, #news #m_news a, #recipes #m_recipe a, #contactUs #m_contact a {
 			background: none;
 		}
 		
 		
-		#menu_bottom:last-child {
+		#menu_bottom:last-child, #menu_top #m_contact {
 			display: none;
 		}
 		
@@ -1069,14 +1087,14 @@
 			border-top: none;
 		}
 		
-		#slider {
+		#slideCanvas {
 			margin: 0 auto;
 			padding: 0;
 			width: 90%;
 			height: 90%;
 		}
 		
-		#slider img{
+		#slideCanvas img{
 			margin: 0 auto;
 			padding: 0;
 			width: 100%;
@@ -1084,4 +1102,40 @@
 		}
 		
 	}
- 
+	/*-------CELL PHONE - NARROW -------*/ 
+	@media all and (max-width: 400px) {
+
+	/*---ELEMENTS---*/
+		nav {
+			background: none;
+			height: 100%;
+			padding: 0;
+			margin: 0;
+		}
+	
+	/*---IDS---*/			
+		
+		#menu_top {
+			padding: 0;
+		}
+		#menu_top a {
+			float: none;
+			background: #2eadb6;	
+			font-size: 1.15em;
+			display: block;
+			padding: 10px;
+			width: 100%;
+			margin: 0;
+			border: 1px solid #037f88;
+			box-shadow: 2px 2px 3px #000;
+		}
+		
+		#menu_top a:hover {
+			background: #0aad14;
+			border: 1px solid #0aad14;
+		}
+		
+		#home #m_home a, #about #m_about a, #news #m_news a, #recipes #m_recipe a, #contactUs #m_contact a {
+			background: #0aad14;
+		}		
+	}
