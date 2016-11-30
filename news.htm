@@ -9,7 +9,7 @@ Copyright  2016
 
 <title>News - Sunny Eggs Co</title>
 <meta charset="UTF-8">
-
+<meta name="viewport" content="width=device-width">
 <link href='main.css' rel='stylesheet' type='text/css' media="screen" />
 <script src="main.js" type="text/javascript"></script>
 
@@ -21,52 +21,62 @@ Copyright  2016
 </head>
 
 
-<body id="news">
+<body id="news" onload="startWorker()">
 <header>
 <h1><a href="main.htm">Sunny Eggs Co</a></h1>
-	<nav>
-	<h2 hidden>Navigation</h2>
-		<ul id="menu_top">
-			<li><a id="m_home" href="main.htm">Home</a></li>
-			<li id="m_about"><a href="about.htm">About Us</a>
-				<ul id="aboutSub">
-					<li><a href="about.htm">About Sunny Eggs</a></li>
-					<li><a href="about.htm#facts">Egg Facts</a>
-						<ul>
-							<li><a href="about.htm#methods">How We Do It</a></li>
-							<li><a href="about.htm#nutrition">Nutrition Facts</a></li>
-							<li><a href="contact.htm#location">Visit Our Farms</a></li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-			<li><a href="contact.htm">Contact Us</a>
-			<li id="m_recipe"><a href="recipes.htm">Recipes</a>
-				<ul id="recipeSub">
-					<li><a href="recipes.htm#scramble">Perfect Scrambled Eggs</a></li>
-					<li><a href="recipes.htm#omlete">Omlete Supreme</a></li>
-				</ul>
-			</li>
-			<li id="m_news"><a href="news.htm">News/Blog</a>
-				<ul id="newsSub">
-					<li><a href="news.htm">Weekly News and Blog</a></li>
-					<li><a href="news.htm#follow">Follow Our Birds</a>
-						<ul>
-							<li><a href="news.htm#liveStream">Bird Watching</a></li>
-							<li><a href="news.htm#bios">Bird Bios</a></li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-		</ul><!--END MAIN MENU TOP-->
-	</nav>
 </header>
+<nav>
+	<h2 hidden>Navigation</h2>
+	<ul id="menu_top">
+		<li id="m_home"><a href="main.htm">Home</a></li>
+		<li id="m_about"><a href="about.htm">About Us</a>
+			<ul id="aboutSub">
+				<li><a href="about.htm">About Sunny Eggs</a></li>
+				<li><a href="about.htm#facts">Egg Facts</a>
+				</li>
+			</ul>
+		</li>
+		<li><a id="m_contact" href="contact.htm">Contact Us</a>
+		<li id="m_recipe"><a href="recipes.htm">Recipes</a>
+		</li>
+		<li id="m_news"><a href="news.htm">News</a>
+			<ul id="newsSub">
+				<li><a href="news.htm">Weekly News and Blog</a></li>
+				<li><a href="news.htm#follow">Follow Our Birds</a>
+				</li>
+			</ul>
+		</li>
+	</ul><!--END MAIN MENU TOP-->
+</nav>
 <h2>News and Livestream</h2>
 <main id="mainContent">
 	<h3 hidden>Main Page Content</h3>
 	<div id="pageIntro">
 		<h4 hidden>Page Introduction Quote</h4>
-			<p class="quote">This page features eggs in the news and witty blog posts from Professor Yolk. You may learn more about eggs than you wanted to know.</p>
+		<!--WORKER SCRIPT-->
+		<script>
+			var w;
+
+			function startWorker() {
+				if(typeof(Worker) !== "undefined") {
+					if(typeof(w) == "undefined") {
+						w = new Worker("worker.js");
+					}
+					w.onmessage = function(event) {
+						document.getElementById("result").innerHTML = event.data;
+					};
+				} else {
+					document.getElementById("result").innerHTML = "MANY, MANY";
+				}
+			}
+
+			function stopWorker() {
+				w.terminate();
+				w = undefined;
+			}
+		</script><!--END WORKER SCRIPT-->
+
+			<blockquote><span class="dropCap">T</span>his page features eggs in the news and witty blog posts from Professor Yolk. You may learn more about eggs than you wanted to know. For instance, did you know that our chickens have laid <strong><output id="result"></output></strong> eggs!! - Professor Yolk</blockquote>
 		</div><!--END PAGE INTRO-->
 
 	<h4>News Articles <a id="hideNews" href="#news" onclick="hide('newsArticles'); hide('hideNews'); show('showNews');" title="Show News">&#45;</a><a id="showNews" href="#news" onclick="show('hideNews'); show('newsArticles'); hide('showNews')" title="Show News">&#43;</a></h4>	
@@ -90,10 +100,10 @@ Copyright  2016
 			Sed mollis suscipit dapibus. Vestibulum in urna tincidunt, molestie elit quis, mollis arcu. Aenean sed condimentum mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur ut dui vel dolor convallis fringilla. Mauris et fringilla nunc. Sed ultrices consequat gravida.</p>
 		</article><!--END ARTICLE 2-->	
 	</div><!--END NEWS ARTICLES-->
-<div id="follow">	
-	<div id="liveStream">
+<div id="liveStream">
+	<div id="follow">
 	<h4>Livestream</h4>
-		<p class="quote">Want to see how your egg laying friends spend their days? Like to watch chickens walk around and eat healthy bugs, grass, and seeds? Well then you've come to the right place. - Professor Yolk</p>
+		<blockquote>Want to see how your egg laying friends spend their days? Like to watch chickens walk around and eat healthy bugs, grass, and seeds? Well then you've come to the right place. - Professor Yolk</blockquote>
 		<video controls preload="auto" width="800" height="600" autoplay loop muted>
 			<source src="video/Chickens01.mp4" type="video/mp4" />
 			<source src="video/Chickens01.ogv" type="video/ogv" />

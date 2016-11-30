@@ -8,12 +8,14 @@ Copyright  2016
 <head>
 <meta charset="UTF-8">
 <title>About - Sunny Eggs Co</title>
-
+<meta name="viewport" content="width=device-width">
 
 <link href='main.css' rel='stylesheet' type='text/css' media="screen" />
 <script src="main.js" type="text/javascript"></script>
 <script src="modernizr.js"></script>
 <script src="oldBrowser.js"></script>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap.js"></script>
 <script>
   if (!Modernizr.csstransitions) {
     startFunc();
@@ -32,48 +34,35 @@ Copyright  2016
 <body id="about">
 <header>
 <h1><a href="main.htm">Sunny Eggs Co</a></h1>
-	<nav>
-	<h2 hidden>Navigation</h2>
-		<ul id="menu_top">
-			<li><a id="m_home" href="main.htm">Home</a></li>
-			<li id="m_about"><a href="about.htm">About Us</a>
-				<ul id="aboutSub">
-					<li><a href="about.htm">About Sunny Eggs</a></li>
-					<li><a href="about.htm#facts">Egg Facts</a>
-						<ul>
-							<li><a href="about.htm#methods">How We Do It</a></li>
-							<li><a href="about.htm#nutrition">Nutrition Facts</a></li>
-							<li><a href="contact.htm#location">Visit Our Farms</a></li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-			<li><a href="contact.htm">Contact Us</a>
-			<li id="m_recipe"><a href="recipes.htm">Recipes</a>
-				<ul id="recipeSub">
-					<li><a href="recipes.htm#scramble">Perfect Scrambled Eggs</a></li>
-					<li><a href="recipes.htm#omlete">Omlete Supreme</a></li>
-				</ul>
-			</li>
-			<li id="m_news"><a href="news.htm">News/Blog</a>
-				<ul id="newsSub">
-					<li><a href="news.htm">Weekly News and Blog</a></li>
-					<li><a href="news.htm#follow">Follow Our Birds</a>
-						<ul>
-							<li><a href="news.htm#liveStream">Bird Watching</a></li>
-							<li><a href="news.htm#bios">Bird Bios</a></li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-		</ul><!--END MAIN MENU TOP-->
-	</nav>
 </header>
+<nav>
+	<h2 hidden>Navigation</h2>
+	<ul id="menu_top">
+		<li id="m_home"><a href="main.htm">Home</a></li>
+		<li id="m_about"><a href="about.htm">About Us</a>
+			<ul id="aboutSub">
+				<li><a href="about.htm">About Sunny Eggs</a></li>
+				<li><a href="about.htm#facts">Egg Facts</a>
+				</li>
+			</ul>
+		</li>
+		<li><a id="m_contact" href="contact.htm">Contact Us</a>
+		<li id="m_recipe"><a href="recipes.htm">Recipes</a>
+		</li>
+		<li id="m_news"><a href="news.htm">News</a>
+			<ul id="newsSub">
+				<li><a href="news.htm">Weekly News and Blog</a></li>
+				<li><a href="news.htm#follow">Follow Our Birds</a>
+				</li>
+			</ul>
+		</li>
+	</ul><!--END MAIN MENU TOP-->
+</nav>
 <h2>About</h2>
 <main id="mainContent">
 	<h3 hidden>Main Page Content</h3>
 	<div id="pageIntro">
-		<p class="quote">This page is about who we are and what we do. Yeah, we raise chickens that produce eggs, which you eat and enjoy ... but just how does the egg end up in the store carton. You know, it's not born there. It's born here. In sunshine, grass, and fresh air, on a diet of goodness and happiness! - Professor Yolk</p>
+		<blockquote><span class="dropCap">T</span>his page is about who we are and what we do. Yeah, we raise chickens that produce eggs, which you eat and enjoy ... but just how does the egg end up in the store carton. You know, it's not born there. It's born here. In sunshine, grass, and fresh air, on a diet of goodness and happiness! - Professor Yolk</blockquote>
 	</div><!--END PAGE INTRO-->
 	<article>
 	<h4>About Sunny Egg Farms</h4>
@@ -88,13 +77,120 @@ Copyright  2016
 	<p>Want to come work for us? We always have a space available for those looking for a job and for those wanting to contribute to the things we believe in. Even if you just want to volunteer time at handing out food, we can help you get connected to the right people in your area so you can start doing that. We even have free classes you can take to train you how to do things. If you are interested, go to the <a href="contact.htm">Contact Us</a> page and submit your application now!</p>
 	</article>
 	
+	<section>
+	<h4>Where in the World Are We??</h4>
+	<blockquote><p>Want to know where to go for those amazing, delicious, healthy, satisfying, scrumptuous ... oh, but I could on, but want to know where this whole thing is hatched? Just click the button below, make sure to allow the browser to know your location, and then you may find you are a short distance away from one of our yolk farms! - Professor Yolk</p></blockquote>
+	<div id="eggLocation">
+	<!--IN PAGE JS TO MAKE THE GEOLOCATION FUNCTION PROPERLY-->
+		<script>
+		var geodata;
+		function startNav() {
+		if (navigator.geolocation) {
+		  navigator.geolocation.getCurrentPosition(success, error);
+		}
+		}
+
+		function error(msg) {  
+		  // console.log(msg);
+		}
+
+		function success(position) {
+
+		  var url = "http://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude + "," + position.coords.longitude + "&sensor=true";
+		  
+		  geodata = position.coords;
+		  
+		  $.ajax({
+			url: url,
+			type: 'GET',
+			dataType: 'json',
+			success: function(data) {
+			  if(data.status === "OK")
+			  {
+				var address = data.results[1].formatted_address;
+				$(".geo")
+				.show()
+				.html("It looks like you're at or near <strong>" + address + "</strong>.");    
+				
+				//console.log(data);
+				addDistances($('.list-original li'), position.coords);
+			  }
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+			  //console.log(errorThrown);
+			}
+		  });
+		}
+		function addDistances(listOriginal, geoData)
+		{
+		  $(listOriginal).each(function() {
+			var lat = $(this).data("lat"),
+				lng = $(this).data("lng"),
+				d = getDistance(lat, geodata.latitude, lng, geodata.longitude),
+				km = (Math.floor(d * 100)/100),
+				mi = (Math.floor((d*0.621371) * 100)/100);
+			$(this)
+			  .attr("data-distance", d)
+			  .append(" <span><strong>" + mi + "</strong> miles away from you as the crow flies.</span>");
+		  });
+		}
+
+
+		function sortAlpha(a, b) {
+		  return $(a).data('distance') > $(b).data('distance') ? 1 : -1;
+		}
+
+		// Haversine formula
+		// http://www.movable-type.co.uk/scripts/latlong.html
+		function getDistance(lat1, lat2, lon1, lon2) {
+		  var R = 6371, // km
+			  dLat = (lat2-lat1).toRad(),
+			  dLon = (lon2-lon1).toRad();
+		  
+		  lat1 = parseFloat(lat1).toRad();
+		  lat2 = parseFloat(lat2).toRad();
+
+		  var a = Math.sin(dLat/2) * Math.sin(dLat/2) +      
+				  Math.sin(dLon/2) * Math.sin(dLon/2) *
+				  Math.cos(lat1) * Math.cos(lat2),
+			  c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)),
+			  d = R * c;
+		  return d;
+		}
+
+		// http://stackoverflow.com/a/5260472/28004  
+		/** Converts numeric degrees to radians **/
+		//if (typeof(Number.prototype.toRad) === "undefined") {
+		  Number.prototype.toRad = function() {
+			return this * Math.PI / 180;
+		  };
+		//}  
+	</script>
+	
+	<p class="center"><input type="button" onclick="startNav();show('container');" value="Find Our Farms!" /></p>
+		<div id="container">
+			<p><strong>Your Location: </strong><span class="geo"></span></p>
+			<p><strong>Our Location:</strong></p>
+			<div class="locList">
+				<ul class="list-original">
+					<li data-lat="35.568366" data-lng="-117.670194">Our first farm at IWV is only</li>
+					<li data-lat="35.616483" data-lng="-118.476726">Our second farm at KRV is only</li>
+				</ul>
+			</div>
+		</div>
+	</div><!--END LOCATION-->
+</section>	
 	<div id="facts">
 	<h4>Egg Facts</h4>
-	<p class="quote">Hover over the eggs below to see some egg-cellent facts! - Professor Yolk</p>
-		<div id="fact01"><p>Did you know that eggs are a great source of protein? Most adults need 46-56g of protein a day. Just one of our eggs contains 6g of protein!</p></div>
-		<div id="fact02"><p>Did you know that our chickens eat green grass, bugs, and seeds in a controlled area that is free from pesticides? We also feed them organic food and vegetables from our farms.</p></div>
-		<div id="fact03"><p>Post-It Note for Moms. Did you know that eating an egg each morning while pregnant not only provides you and your baby with needed nutrition, but helps with the sickness?</p></div>
-		<div id="fact04"><p>Put your eggs on their sides the night before hard boiling them in order to center the yolks.</p></div>		
+	<blockquote><p>Click on the eggs below to see some egg-cellent facts! - Professor Yolk</p></blockquote>		
+		<p id="par01">Did you know that eggs are a great source of protein? Most adults need 46-56g of protein a day. Just one of our eggs contains 6g of protein! <a class="small10" href="#par02" onclick="change('#', '1')">Hide this</a></p>		
+		<canvas id="fact01" onclick="change('oval', '1')"></canvas>
+		<p id="par02">Did you know that our chickens eat green grass, bugs, and seeds in a controlled area that is free from pesticides? We also feed them organic food and vegetables from our farms. <a class="small10" href="#par02" onclick="change('#', '2')">Hide this</a><span></span></p>		
+		<canvas id="fact02" onclick="change('rectangle', '2')"></canvas>
+		<p id="par03">Post-It Note for Moms. Did you know that eating an egg each morning while pregnant not only provides you and your baby with needed nutrition, but helps with the sickness? <a class="small10" href="#par02" onclick="change('#', '3')">Hide this</a></p>		
+		<canvas id="fact03" onclick="change('square', '3')"></canvas>
+		<p id="par04">Put your eggs on their sides the night before hard boiling them in order to center the yolks. <a class="small10" href="#par02" onclick="change('#', '4')">Hide this</a></p>		
+		<canvas id="fact04" onclick="change('tilted', '4')"></canvas>
 	</div>
 	<div class="clearBoth"></div>
 
